@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>biliBara_el-scrollbar</title>
+    <url>/2020/05/25/biliBara-el-scrollbar/</url>
+    <content><![CDATA[<p>element-ui中的el-scrollbar的使用总结</p>
+<a id="more"></a>
+
+<p>借鉴：<br><a href="https://segmentfault.com/a/1190000015068613" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015068613</a><br><a href="https://segmentfault.com/a/1190000019325694?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000019325694?utm_source=tag-newest</a></p>
+<p>#1.工作原理：<br>总的来说el-scrollbar就是一个wrapper，包裹住要使用scroll的区域。而包裹el-scrollbar的元素要设置成overflow: hidden</p>
+<img src="/2020/05/25/biliBara-el-scrollbar/17071720-c586a0d4ecb2a289.png" class="" title="图片.png">
+<p>#2.使用<br>设置el-scrollbar的父元素（比如#app，html和body）以及el-scrollbar本身</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#app</span>, <span class="selector-tag">html</span>, <span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.page-component__scroll</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>想要应用横轴的话还要加上</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.el-scrollbar &gt;&gt;&gt; .el-scrollbar__wrap</span><br><span class="line">  overflow-x: hidden</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>biliBara</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>element-ui</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>biliBara</title>
     <url>/2020/05/24/biliBara/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>flask+vue的b站弹幕爬虫统计数据</p>
+<img src="/2020/05/24/biliBara/1590339415849.png" class="" width="1590339415849">
+
+<a id="more"></a>
+
+<h1 id="1-FLASK"><a href="#1-FLASK" class="headerlink" title="1.FLASK"></a>1.FLASK</h1><h3 id="1-requirement文件"><a href="#1-requirement文件" class="headerlink" title="1. requirement文件"></a>1. requirement文件</h3><p>生成</p>
+<figure class="highlight plain"><figcaption><span>freeze > requirements.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="2-PYTHON"><a href="#2-PYTHON" class="headerlink" title="2.PYTHON"></a>2.PYTHON</h1><h3 id="1-jieba提词和echarts-wordcloud"><a href="#1-jieba提词和echarts-wordcloud" class="headerlink" title="1.jieba提词和echarts wordcloud"></a>1.jieba提词和echarts wordcloud</h3><p><a href="https://www.jianshu.com/p/8490b46473a5" target="_blank" rel="noopener">https://www.jianshu.com/p/8490b46473a5</a><br>一般词云都是要使用词语的权重，这个权重的计算可以使用jieba提词轻松实现</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> jieba.analyse</span><br><span class="line"><span class="comment">#获得一个元祖的数组[("中国", 0.234),("人", 0.4613)]</span></span><br><span class="line">tags = jieba.analyse.extract_tags(content, topK=<span class="number">100</span>, withWeight=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">for</span> tex, weight <span class="keyword">in</span> tags:</span><br><span class="line">   tagsList[tex] += int(weight*<span class="number">10000</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-flask接受请求的参数"><a href="#2-flask接受请求的参数" class="headerlink" title="2.flask接受请求的参数"></a>2.flask接受请求的参数</h3><p><a href="https://www.cnblogs.com/shangpolu/p/7106922.html" target="_blank" rel="noopener">https://www.cnblogs.com/shangpolu/p/7106922.html</a><br>1.get请求</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2.post请求</span><br><span class="line">&#96;&#96;&#96;request.form.get(&quot;key&quot;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-python原始爬虫"><a href="#3-python原始爬虫" class="headerlink" title="3.python原始爬虫"></a>3.python原始爬虫</h3><p><a href="https://blog.csdn.net/weixin_41429999/article/details/105781775" target="_blank" rel="noopener">https://blog.csdn.net/weixin_41429999/article/details/105781775</a></p>
+<h1 id="3-VUE"><a href="#3-VUE" class="headerlink" title="3.VUE"></a>3.VUE</h1><h3 id="1-vuex，localStorage和sessionStorage"><a href="#1-vuex，localStorage和sessionStorage" class="headerlink" title="1.vuex，localStorage和sessionStorage"></a>1.vuex，localStorage和sessionStorage</h3><p><a href="https://www.cnblogs.com/liangtao999/p/12623617.html" target="_blank" rel="noopener">https://www.cnblogs.com/liangtao999/p/12623617.html</a></p>
+<p>veux主要用于页面跳转间的传值，储存在内存之中，页面刷新就会丢失</p>
+<p>localStorage会永久储存在浏览器中，不丢失</p>
+<p>sessionStorage临时储存在浏览器中，浏览器关闭便会丢失</p>
+<h3 id="2-页面无跳闪刷新"><a href="#2-页面无跳闪刷新" class="headerlink" title="2.页面无跳闪刷新"></a>2.页面无跳闪刷新</h3><p><a href="https://blog.csdn.net/weixin_43885417/article/details/91310674" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43885417/article/details/91310674</a></p>
+<h3 id="3-echarts"><a href="#3-echarts" class="headerlink" title="3.echarts"></a>3.echarts</h3><p>可以直接卸载mounted之中<br><strong>impotant！</strong>但要注意的是，在使用axiso获取数据时，要将设置项（setOption）放在axios的请求处理之中，否则图表将不会显示数据</p>
+<h3 id="4-vue-config-js配置"><a href="#4-vue-config-js配置" class="headerlink" title="4.vue.config.js配置"></a>4.vue.config.js配置</h3><h1 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h1>]]></content>
+      <categories>
+        <category>biliBara</category>
+      </categories>
       <tags>
         <tag>python</tag>
         <tag>flask</tag>
@@ -12,8 +64,8 @@
       </tags>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/2020/05/24/categories/</url>
+    <title>hexo-build</title>
+    <url>/2020/05/25/hexo-build/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -33,10 +85,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>test-img</title>
-    <url>/2020/05/23/test-img/</url>
-    <content><![CDATA[<img src="/2020/05/23/test-img/20171211163359959.png" class="" title="img">]]></content>
   </entry>
 </search>
