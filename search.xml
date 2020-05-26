@@ -190,4 +190,48 @@
         <tag>前端</tag>
       </tags>
   </entry>
+  <entry>
+    <title>biliBara_liveStreaming</title>
+    <url>/2020/05/27/biliBara-liveStreaming/</url>
+    <content><![CDATA[<p>记录实现对b站直播间弹幕的爬取和统计过程</p>
+<a id="more"></a>
+
+<h1 id="1-分析包"><a href="#1-分析包" class="headerlink" title="1. 分析包"></a>1. 分析包</h1><h3 id="1-使用chrome"><a href="#1-使用chrome" class="headerlink" title="1.使用chrome"></a>1.使用chrome</h3><p>使用chrome对包的preview一个一个查看后，发现一个gethistory的包符合要查找的对象</p>
+<img src="/2020/05/27/biliBara-liveStreaming/1590517175355.png" class="" width="1590517175355">
+
+<p>点开headers进行分析</p>
+<p>发现是post请求，所以需要headers和request body</p>
+<p>也就复制headers和form data部分</p>
+<h3 id="2-使用fiddle-optional"><a href="#2-使用fiddle-optional" class="headerlink" title="2. 使用fiddle(optional)"></a>2. 使用fiddle(optional)</h3><p>因为fiddle默认无法获取https请求，所以要先对fiddle进行设置</p>
+<p>打开tools-&gt;option，设置成这样</p>
+<img src="/2020/05/27/biliBara-liveStreaming/1590517433674.png" class="" width="1590517433674">
+
+<p>再打开actions，点击trust root certificate，关闭并保存</p>
+<p>然后使用find查找gethistory，并拖入composer里</p>
+<p>最后可以发现fiddle获得的信息和chrome相同</p>
+<img src="/2020/05/27/biliBara-liveStreaming/1590517308512.png" class="" width="1590517308512">
+
+<p>那么requests请求的代码可以表示为</p>
+<p>（<strong>！！！注意：</strong> post请求要有headers和data）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> gzip</span><br><span class="line">url = <span class="string">"https://api.live.bilibili.com/xlive/web-room/v1/dM/gethistory"</span></span><br><span class="line"><span class="comment"># headers</span></span><br><span class="line">headers=&#123;</span><br><span class="line"><span class="string">'accept'</span>: <span class="string">'application/json, text/plain, */*'</span>,</span><br><span class="line"><span class="string">'accept-encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</span><br><span class="line"><span class="string">'accept-language'</span>: <span class="string">'en'</span>,</span><br><span class="line"><span class="string">'content-length'</span>: <span class="string">'107'</span>,</span><br><span class="line"><span class="string">'content-type'</span>: <span class="string">'application/x-www-form-urlencoded'</span>,</span><br><span class="line"><span class="string">'cookie'</span>: <span class="string">r"_uuid=D16D0A02-421C-2253-9AD8-FADD9A976C1144289infoc; CURRENT_FNVAL=16; buvid3=A3D7CCA8-0D9B-43D8-B56A-614F12447787155833infoc; LIVE_BUVID=AUTO8315677851506285; rpdid=|(YuJm~|)lJ0J'ulY~~)lu)|; stardustvideo=1; sid=ih8yqv5n; laboratory=1-1; im_notify_type_6692208=0; LIVE_PLAYER_TYPE=2; dy_spec_agreed=1; DedeUserID=6692208; DedeUserID__ckMd5=c56ad702aa91db1e; SESSDATA=c04b7a1f%2C1603258212%2C356e9*41; bili_jct=2f70ab6c72811e66d8aa2c213b66527c; CURRENT_QUALITY=116; bsource=seo_baidu; deviceFingerprint=76d922916b398d424d70e37a93a1c417; kfcSource=Mdynamic; msource=Mdynamic; bp_t_offset_6692208=393673472539036962; _dfcaptcha=587eada633263e36dac94ac17ca97527; bp_video_offset_6692208=393691816342365508; Hm_lvt_8a6e55dbd2870f0f5bc9194cddf32a02=1590502278,1590503295; Hm_lpvt_8a6e55dbd2870f0f5bc9194cddf32a02=1590503295; PVID=14"</span>,</span><br><span class="line"><span class="string">'origin'</span>: <span class="string">'https://live.bilibili.com'</span>,</span><br><span class="line"><span class="string">'referer'</span>: <span class="string">'https://live.bilibili.com/21129786'</span>,</span><br><span class="line"><span class="string">'sec-fetch-dest'</span>: <span class="string">'empty'</span>,</span><br><span class="line"><span class="string">'sec-fetch-mode'</span>: <span class="string">'cors'</span>,</span><br><span class="line"><span class="string">'sec-fetch-site'</span>: <span class="string">'same-site'</span>,</span><br><span class="line"><span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#formdata</span></span><br><span class="line">formdata=&#123;</span><br><span class="line"><span class="string">'roomid'</span>: <span class="string">'21129786'</span>,</span><br><span class="line"><span class="string">'csrf_token'</span>: <span class="string">'2f70ab6c72811e66d8aa2c213b66527c'</span>,</span><br><span class="line"><span class="string">'csrf'</span>: <span class="string">'2f70ab6c72811e66d8aa2c213b66527c'</span></span><br><span class="line">    &#125;</span><br><span class="line">headers2 = &#123;</span><br><span class="line"><span class="string">'Host'</span>: <span class="string">'api.live.bilibili.com:443'</span>,</span><br><span class="line"><span class="string">'Proxy-Connection'</span>: <span class="string">'keep-alive'</span>,</span><br><span class="line"><span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36'</span></span><br><span class="line">    &#125;</span><br><span class="line">resp = requests.post(url, headers=headers, data=formdata)</span><br></pre></td></tr></table></figure>
+
+<p>但是返回结果之中有编码</p>
+<img src="/2020/05/27/biliBara-liveStreaming/1590517726858.png" class="" width="1590517726858">
+
+<p>查看chrome中的元素后发现这是&gt;的unicode编码</p>
+<p>那么接着添加上</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">resp.encoding = <span class="string">"unicode_escape"</span></span><br></pre></td></tr></table></figure>
+
+<p>最后编码也就显示正常了</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h1>]]></content>
+      <categories>
+        <category>biliBara</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>flask</tag>
+        <tag>web</tag>
+        <tag>network</tag>
+      </tags>
+  </entry>
 </search>
