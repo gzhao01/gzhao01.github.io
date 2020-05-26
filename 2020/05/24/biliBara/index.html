@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/05/24/biliBara/1590339415849.png">
 <meta property="article:published_time" content="2020-05-24T12:47:23.000Z">
-<meta property="article:modified_time" content="2020-05-24T17:24:05.738Z">
+<meta property="article:modified_time" content="2020-05-26T10:01:02.506Z">
 <meta property="article:author" content="gzhao01">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="flask">
@@ -126,12 +126,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -227,7 +227,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-25 01:24:05" itemprop="dateModified" datetime="2020-05-25T01:24:05+08:00">2020-05-25</time>
+                <time title="Modified: 2020-05-26 18:01:02" itemprop="dateModified" datetime="2020-05-26T18:01:02+08:00">2020-05-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -266,14 +266,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>987</span>
+              <span>5.8k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>5 mins.</span>
             </span>
 
         </div>
@@ -311,7 +311,45 @@
 <p>sessionStorage临时储存在浏览器中，浏览器关闭便会丢失</p>
 <h3 id="2-页面无跳闪刷新"><a href="#2-页面无跳闪刷新" class="headerlink" title="2.页面无跳闪刷新"></a>2.页面无跳闪刷新</h3><p><a href="https://blog.csdn.net/weixin_43885417/article/details/91310674" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43885417/article/details/91310674</a></p>
 <h3 id="3-echarts"><a href="#3-echarts" class="headerlink" title="3.echarts"></a>3.echarts</h3><p>可以直接卸载mounted之中<br><strong>impotant！</strong>但要注意的是，在使用axiso获取数据时，要将设置项（setOption）放在axios的请求处理之中，否则图表将不会显示数据</p>
-<h3 id="4-vue-config-js配置"><a href="#4-vue-config-js配置" class="headerlink" title="4.vue.config.js配置"></a>4.vue.config.js配置</h3><h1 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h1>
+<h3 id="4-vue-config-js配置"><a href="#4-vue-config-js配置" class="headerlink" title="4.vue.config.js配置"></a>4.vue.config.js配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">const path &#x3D; require(&#39;path&#39;)</span><br><span class="line">const debug &#x3D; process.env.NODE_ENV !&#x3D;&#x3D; &#39;production&#39;</span><br><span class="line"> </span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    &#x2F;&#x2F; 访问资源的基本路径，一般不需要进行修改，此处还有疑问，正在验证中</span><br><span class="line">    &#x2F;&#x2F; baseUrl: &#39;&#x2F;&#39;,&lt;br&gt;        publicPath: &#39;&#x2F;&#39;,  &#x2F;&#x2F;publicPath取代了baseUrl</span><br><span class="line">    &#x2F;&#x2F; 打包之后输出文件目录</span><br><span class="line">    outputDir: &#39;dist&#39;,</span><br><span class="line">    assetsDir: &#39;assets&#39;, &#x2F;&#x2F; 打包之后静态资源目录 (js, css, img, fonts)</span><br><span class="line">    &#x2F;&#x2F; eslint-loader 是否在保存的时候检查</span><br><span class="line">    lintOnSave: true,</span><br><span class="line">    &#x2F;&#x2F; use the full build with in-browser compiler?</span><br><span class="line">    &#x2F;&#x2F; https:&#x2F;&#x2F;vuejs.org&#x2F;v2&#x2F;guide&#x2F;installation.html#Runtime-Compiler-vs-Runtime-only</span><br><span class="line">    &#x2F;&#x2F; runtimeCompiler: true, &#x2F;&#x2F;关键点在这  原来的 Compiler 换成了 runtimeCompiler</span><br><span class="line"> </span><br><span class="line">    &#x2F;&#x2F; webpack配置</span><br><span class="line">    &#x2F;&#x2F; see https:&#x2F;&#x2F;github.com&#x2F;vuejs&#x2F;vue-cli&#x2F;blob&#x2F;dev&#x2F;docs&#x2F;webpack.md   webpack链接API，用于生成和修改webapck配置</span><br><span class="line">    chainWebpack: () &#x3D;&gt; &#123;</span><br><span class="line">        if(debug) &#123;</span><br><span class="line">            &#x2F;&#x2F; 本地开发配置</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            &#x2F;&#x2F; 生产开发配置</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    configureWebpack: (config) &#x3D;&gt; &#123; &#x2F;&#x2F; webpack配置，值位对象时会合并配置，为方法时会改写配置</span><br><span class="line">        if(debug) &#123; &#x2F;&#x2F; 开发环境配置</span><br><span class="line">            config.devtool &#x3D; &#39;cheap-module-eval-source-map&#39;</span><br><span class="line">        &#125; else &#123; &#x2F;&#x2F; 生产环境配置</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line">        Object.assign(config, &#123; &#x2F;&#x2F; 开发生产共同配置</span><br><span class="line">            resolve: &#123;</span><br><span class="line">                alias: &#123;</span><br><span class="line">                    &#39;@&#39;: path.resolve(__dirname, &#39;.&#x2F;src&#39;) &#x2F;&#x2F;设置路径别名</span><br><span class="line">                    &#x2F;&#x2F;...</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; vue-loader 配置项</span><br><span class="line">    &#x2F;&#x2F; https:&#x2F;&#x2F;vue-loader.vuejs.org&#x2F;en&#x2F;options.html</span><br><span class="line">    &#x2F;&#x2F; vueLoader: &#123;&#125;,</span><br><span class="line"> </span><br><span class="line">    &#x2F;&#x2F; 生产环境是否生成 sourceMap 文件</span><br><span class="line">    productionSourceMap: true,</span><br><span class="line">    &#x2F;&#x2F; css相关配置 配置高于chainWebpack中关于css loader的配置</span><br><span class="line">    css: &#123;</span><br><span class="line">        &#x2F;&#x2F; 是否使用css分离插件 ExtractTextPlugin</span><br><span class="line">        extract: true,</span><br><span class="line">        &#x2F;&#x2F; 开启 CSS source maps?是否在构建样式地图，false将提高构建速度</span><br><span class="line">        sourceMap: false,</span><br><span class="line">        &#x2F;&#x2F; css预设器配置项</span><br><span class="line">        loaderOptions: &#123;&#125;,</span><br><span class="line">        &#x2F;&#x2F; 启用 CSS modules for all css &#x2F; pre-processor files.</span><br><span class="line">        modules: false</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; use thread-loader for babel &amp; TS in production build</span><br><span class="line">    &#x2F;&#x2F; enabled by default if the machine has more than 1 cores 构建时开启多进程处理babel编译</span><br><span class="line">    parallel: require(&#39;os&#39;).cpus().length &gt; 1,</span><br><span class="line">    &#x2F;&#x2F; 是否启用dll</span><br><span class="line">    &#x2F;&#x2F; See https:&#x2F;&#x2F;github.com&#x2F;vuejs&#x2F;vue-cli&#x2F;blob&#x2F;dev&#x2F;docs&#x2F;cli-service.md#dll-mode</span><br><span class="line">    &#x2F;&#x2F; dll: false,</span><br><span class="line"> </span><br><span class="line">    &#x2F;&#x2F; PWA 插件相关配置</span><br><span class="line">    &#x2F;&#x2F; see https:&#x2F;&#x2F;github.com&#x2F;vuejs&#x2F;vue-cli&#x2F;tree&#x2F;dev&#x2F;packages&#x2F;%40vue&#x2F;cli-plugin-pwa</span><br><span class="line">    pwa: &#123;&#125;,</span><br><span class="line">    &#x2F;&#x2F; webpack-dev-server 相关配置</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        open: true,</span><br><span class="line">        host: &#39;localhost&#39;,</span><br><span class="line">        port: 8084,</span><br><span class="line">        proxy: &#123;</span><br><span class="line">          &#39;&#x2F;api&#39;: &#123;</span><br><span class="line">            target: &#39;http:&#x2F;&#x2F;127.0.0.1:5000&#39;,</span><br><span class="line">            changeOrigin: true,</span><br><span class="line">            secure: false,</span><br><span class="line">            pathRewrite:&#123;</span><br><span class="line">              &quot;^&#x2F;api&quot;: &quot;&quot;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; &#x2F;&#x2F; 设置代理</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中的代理设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">    open: true,</span><br><span class="line">    host: &#39;localhost&#39;,</span><br><span class="line">    port: 8084,</span><br><span class="line">    proxy: &#123;</span><br><span class="line">      &#39;&#x2F;api&#39;: &#123;</span><br><span class="line">        target: &#39;http:&#x2F;&#x2F;127.0.0.1:5000&#39;,</span><br><span class="line">        changeOrigin: true,</span><br><span class="line">        secure: false,</span><br><span class="line">        pathRewrite:&#123;</span><br><span class="line">          &quot;^&#x2F;api&quot;: &quot;&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; &#x2F;&#x2F; 设置代理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h1><h3 id="1-screen"><a href="#1-screen" class="headerlink" title="1. screen"></a>1. screen</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">screen -S yourname  #新建一个叫yourname的session</span><br><span class="line">screen -ls          #列出当前所有的session</span><br><span class="line">screen -r [yourname&#x2F;scrren-id]  #回到yourname这个session</span><br><span class="line">ctrl+a -&gt; d  #detach当前screen回到原本窗口</span><br><span class="line">ctrel+a -&gt; n #显示下一个窗口（next）</span><br><span class="line">screen -X -s [screenname] #关闭会话</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Gunicorn"><a href="#2-Gunicorn" class="headerlink" title="2. Gunicorn"></a>2. Gunicorn</h3><p><a href="https://www.cnblogs.com/luyuze95/p/11696534.html" target="_blank" rel="noopener">https://www.cnblogs.com/luyuze95/p/11696534.html</a></p>
+<p>Web框架致力于如何生成HTML代码，而Web服务器用于处理和响应HTTP请求。Web框架和Web服务器之间的通信，需要一套双方都遵守的接口协议。WSGI协议就是用来统一这两者的接口的。</p>
+<p><strong>1.</strong> 安装gunicorn</p>
+<p>要在虚拟状态激活的情况下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install gunicorn   #阿里云自带python2，pip3可以确保调用python3</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.</strong> 启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn -w 4 -b 127.0.0.1:5000 [app_name]:app</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.</strong> 查找gunicorn进程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep gunicorn</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/freinds/p/8074651.html" target="_blank" rel="noopener">https://www.cnblogs.com/freinds/p/8074651.html</a></p>
+<p>ps-ef用于查看全格式的全部进程，其中“ps”是在抄Linux中是查看进程的命令，“-e”参数代表显示所有进程，“-f”参数代表全格式。</p>
+<p>ps命令将某个进程显示出来</p>
+<p>grep命令是查找</p>
+<p>中间的|是管道命令 是指ps命令与grep同时执行</p>
+<p>PS是LINUX下最常用的也是非常强大的进程查看命令</p>
+<p>grep命令是查找，是一种强大的文本搜索工具，它能<a href="https://www.baidu.com/s?wd=%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1d9uWD3PhP9n1b4m1nduAcz0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EPjfvrHnzPWT3" target="_blank" rel="noopener">使用正则表达式</a>搜索文本，并把匹配的行打印出来。</p>
+<p>grep全称是Global Regular Expression Print，表示全局正则表达式版本，它的使用权限是所有用户。</p>
+<p>以下这条命令是检查java 进程是否存在：ps -ef |grep java</p>
+<p>*<em>3. *</em>杀死进程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -9 [id]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-nginx"><a href="#3-nginx" class="headerlink" title="3.nginx"></a>3.nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload   #重新加载nginx配置</span><br><span class="line">sudo service nginx restart  #启动nginx</span><br></pre></td></tr></table></figure>
+
+<p>nginx的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#networkproject</span><br><span class="line"> server &#123;</span><br><span class="line">    listen       8084 default_server;</span><br><span class="line">    listen       [::]:8084 default_server;</span><br><span class="line">    server_name  47.96.227.33;</span><br><span class="line">    root         &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html;</span><br><span class="line"></span><br><span class="line">    # Load configuration files for the default server block.</span><br><span class="line">    include &#x2F;etc&#x2F;nginx&#x2F;default.d&#x2F;*.conf;</span><br><span class="line"></span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">            ## stitp的目录</span><br><span class="line">            # the direction of the stitp project</span><br><span class="line">            root &#x2F;myfiles&#x2F;blibiliBarrage&#x2F;dist;</span><br><span class="line">            index index.html;</span><br><span class="line">    &#125;</span><br><span class="line">    # 路径代理</span><br><span class="line">    location &#x2F;api&#x2F; &#123;</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;127.0.0.1:5000&#x2F;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    error_page 404 &#x2F;404.html;</span><br><span class="line">        location &#x3D; &#x2F;40x.html &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    error_page 500 502 503 504 &#x2F;50x.html;</span><br><span class="line"></span><br><span class="line">    location &#x3D; &#x2F;50x.html &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -398,7 +436,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-FLASK"><span class="nav-number">1.</span> <span class="nav-text">1.FLASK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-requirement文件"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. requirement文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-PYTHON"><span class="nav-number">2.</span> <span class="nav-text">2.PYTHON</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-jieba提词和echarts-wordcloud"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.jieba提词和echarts wordcloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-flask接受请求的参数"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.flask接受请求的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-python原始爬虫"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.python原始爬虫</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-VUE"><span class="nav-number">3.</span> <span class="nav-text">3.VUE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-vuex，localStorage和sessionStorage"><span class="nav-number">3.0.1.</span> <span class="nav-text">1.vuex，localStorage和sessionStorage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-页面无跳闪刷新"><span class="nav-number">3.0.2.</span> <span class="nav-text">2.页面无跳闪刷新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-echarts"><span class="nav-number">3.0.3.</span> <span class="nav-text">3.echarts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-vue-config-js配置"><span class="nav-number">3.0.4.</span> <span class="nav-text">4.vue.config.js配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-部署"><span class="nav-number">4.</span> <span class="nav-text">4.部署</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-FLASK"><span class="nav-number">1.</span> <span class="nav-text">1.FLASK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-requirement文件"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. requirement文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-PYTHON"><span class="nav-number">2.</span> <span class="nav-text">2.PYTHON</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-jieba提词和echarts-wordcloud"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.jieba提词和echarts wordcloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-flask接受请求的参数"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.flask接受请求的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-python原始爬虫"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.python原始爬虫</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-VUE"><span class="nav-number">3.</span> <span class="nav-text">3.VUE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-vuex，localStorage和sessionStorage"><span class="nav-number">3.0.1.</span> <span class="nav-text">1.vuex，localStorage和sessionStorage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-页面无跳闪刷新"><span class="nav-number">3.0.2.</span> <span class="nav-text">2.页面无跳闪刷新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-echarts"><span class="nav-number">3.0.3.</span> <span class="nav-text">3.echarts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-vue-config-js配置"><span class="nav-number">3.0.4.</span> <span class="nav-text">4.vue.config.js配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-部署"><span class="nav-number">4.</span> <span class="nav-text">4.部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-screen"><span class="nav-number">4.0.1.</span> <span class="nav-text">1. screen</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Gunicorn"><span class="nav-number">4.0.2.</span> <span class="nav-text">2. Gunicorn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-nginx"><span class="nav-number">4.0.3.</span> <span class="nav-text">3.nginx</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -421,13 +459,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -468,12 +506,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">2k</span>
+    <span title="Symbols count total">8k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2 mins.</span>
+    <span title="Reading time total">8 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
