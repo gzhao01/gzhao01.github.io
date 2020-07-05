@@ -20,20 +20,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="a green hand in coding, gaming and animation">
-<meta property="og:type" content="website">
-<meta property="og:title" content="gzhao01&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/categories/hexo/index.html">
+  <meta name="description" content="要求实现大整数的加减乘除，开方，幂运算，实现ui界面，文本输入输出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BigIntegerRealize">
+<meta property="og:url" content="http://yoursite.com/2020/06/22/BigIntegerRealize/index.html">
 <meta property="og:site_name" content="gzhao01&#39;s blog">
-<meta property="og:description" content="a green hand in coding, gaming and animation">
+<meta property="og:description" content="要求实现大整数的加减乘除，开方，幂运算，实现ui界面，文本输入输出">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-22T13:09:52.000Z">
+<meta property="article:modified_time" content="2020-06-22T13:20:53.263Z">
 <meta property="article:author" content="gzhao01">
-<meta property="article:tag" content="machine learning">
-<meta property="article:tag" content=" vue">
-<meta property="article:tag" content=" python">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="qt">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/categories/hexo/">
+<link rel="canonical" href="http://yoursite.com/2020/06/22/BigIntegerRealize/">
 
 
 <script id="page-configurations">
@@ -41,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Category: hexo | gzhao01's blog</title>
+  <title>BigIntegerRealize | gzhao01's blog</title>
   
 
 
@@ -185,57 +186,171 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/BigIntegerRealize/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="gzhao01">
+      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gzhao01's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          BigIntegerRealize
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-06-22 21:09:52 / Modified: 21:20:53" itemprop="dateCreated datePublished" datetime="2020-06-22T21:09:52+08:00">2020-06-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/school/" itemprop="url" rel="index"><span itemprop="name">school</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">hexo
-          <small>Category</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/06/22/BigIntegerRealize/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/22/BigIntegerRealize/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>812</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <p>要求实现大整数的加减乘除，开方，幂运算，实现ui界面，文本输入输出</p>
+<a id="more"></a>
+
+<p>首先，类内存储<strong>字符串</strong>和<strong>负数标记位</strong></p>
+<p>然后申明一个reverse函数用于翻转字符串</p>
+<p>然后要声明一个compare函数用于比较大整数的大小</p>
+<p>最后要声明一个leftclear函数，用于清除字符串左边多余的0</p>
+<h1 id="1-加法"><a href="#1-加法" class="headerlink" title="1. 加法"></a>1. 加法</h1><p>补0，注意进位，其他的从右向左相加即可（可翻转字符串后再运算）</p>
+<h1 id="2-减法"><a href="#2-减法" class="headerlink" title="2. 减法"></a>2. 减法</h1><p>先比较大小，根据大小不同分别运算</p>
+<p>然后补0，同样注意进位</p>
+<h1 id="3-乘法"><a href="#3-乘法" class="headerlink" title="3. 乘法"></a>3. 乘法</h1><p>每次相乘在后面添加响应数目的0，然后相加的到结果</p>
+<h1 id="4-除法"><a href="#4-除法" class="headerlink" title="4. 除法"></a>4. 除法</h1><h1 id="5-幂运算"><a href="#5-幂运算" class="headerlink" title="5. 幂运算"></a>5. 幂运算</h1><p>这里不好使用快速幂运算，就直接乘就好了</p>
+<p>快速幂：</p>
+<h1 id="6-开方"><a href="#6-开方" class="headerlink" title="6. 开方"></a>6. 开方</h1><p>使用二分法进行开放</p>
+<ol>
+<li><p>一般数值的二分法</p>
+</li>
+<li><p>大整数二分法</p>
+</li>
+</ol>
+<h1 id="7-界面"><a href="#7-界面" class="headerlink" title="7.界面"></a>7.界面</h1><p>使用的qt做的</p>
+<h1 id="1-读取文本文件"><a href="#1-读取文本文件" class="headerlink" title="1.读取文本文件"></a>1.读取文本文件</h1><pre><code>//定义文件对话框类
+QFileDialog *fileDialog = new QFileDialog(this);
+//定义文件对话框标题
+fileDialog-&gt;setWindowTitle(QStringLiteral(&quot;选中文件&quot;));
+//设置默认文件路径
+fileDialog-&gt;setDirectory(&quot;.&quot;);
+//设置文件过滤器
+fileDialog-&gt;setNameFilter(tr(&quot;File(*.*)&quot;));
+//设置可以选择多个文件,默认为只能选择一个文件QFileDialog::ExistingFiles
+fileDialog-&gt;setFileMode(QFileDialog::ExistingFiles);
+//设置视图模式
+fileDialog-&gt;setViewMode(QFileDialog::Detail);
+//打印所有选择的文件的路径
+QStringList fileNames;
+if (fileDialog-&gt;exec()) {
+    fileNames = fileDialog-&gt;selectedFiles();
+}</code></pre>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-25T00:35:38+08:00"
-              content="2020-05-25">
-          05-25
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/c/" rel="tag"># c++</a>
+              <a href="/tags/qt/" rel="tag"># qt</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/05/25/hexo-build/" itemprop="url">
-            <span itemprop="name">hexo-build</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/22/Ntop/" rel="prev" title="Ntop">
+      <i class="fa fa-chevron-left"></i> Ntop
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/05/pytorchSet/" rel="next" title="pytorch+anoconda+pycharm安装">
+      pytorch+anoconda+pycharm安装 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -282,6 +397,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-加法"><span class="nav-number">1.</span> <span class="nav-text">1. 加法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-减法"><span class="nav-number">2.</span> <span class="nav-text">2. 减法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-乘法"><span class="nav-number">3.</span> <span class="nav-text">3. 乘法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-除法"><span class="nav-number">4.</span> <span class="nav-text">4. 除法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-幂运算"><span class="nav-number">5.</span> <span class="nav-text">5. 幂运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-开方"><span class="nav-number">6.</span> <span class="nav-text">6. 开方</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-界面"><span class="nav-number">7.</span> <span class="nav-text">7.界面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-读取文本文件"><span class="nav-number">8.</span> <span class="nav-text">1.读取文本文件</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
