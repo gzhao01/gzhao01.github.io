@@ -422,7 +422,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-06 03:14:27 / Modified: 05:00:02" itemprop="dateCreated datePublished" datetime="2020-08-06T03:14:27+08:00">2020-08-06</time>
+              <time title="Created: 2020-08-06 03:14:27 / Modified: 19:11:39" itemprop="dateCreated datePublished" datetime="2020-08-06T03:14:27+08:00">2020-08-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -473,56 +473,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/solution/" target="_blank" rel="noopener">https://leetcode.com/problems/longest-substring-without-repeating-characters/solution/</a></p>
-<p>滑动窗口问题要注意空集。</p>
-<ul>
-<li><code>int[26]</code> for Letters ‘a’ - ‘z’ or ‘A’ - ‘Z’</li>
-<li><code>int[128]</code> for ASCII</li>
-<li><code>int[256]</code> for Extended ASCII</li>
-</ul>
-<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><blockquote>
-<p><strong>Complexity Analysis</strong></p>
-<ul>
-<li>Time complexity : O(2n) = O(n). In the worst case each character will be visited twice by i and j.</li>
-<li>Space complexity : O(min(m, n)). Same as the previous approach. We need O(k)space for the sliding window, where k is the size of the <code>Set</code>. The size of the Set is upper bounded by the size of the string n and the size of the charset/alphabet m.</li>
-</ul>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//空字符串</span></span><br><span class="line">        <span class="keyword">if</span>(s==<span class="string">""</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> maxLen = INT_MIN,l=<span class="number">0</span>,r=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dic[<span class="number">128</span>];</span><br><span class="line">        <span class="built_in">memset</span>(dic,<span class="number">0</span>,<span class="keyword">sizeof</span>(dic));</span><br><span class="line">        <span class="keyword">while</span>(l&lt;=r&amp;&amp;r&lt;s.<span class="built_in">size</span>())&#123;</span><br><span class="line">            <span class="comment">//如果下一个字符的不存在集合里</span></span><br><span class="line">            <span class="keyword">if</span>(!dic[s[r]])&#123;</span><br><span class="line">                dic[s[r++]]++;</span><br><span class="line">                maxLen = <span class="built_in">max</span>(maxLen,r-l);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//如果下一个字符存在集合里</span></span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                dic[s[l++]]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxLen;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>或者：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> hashmap[<span class="number">130</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123; <span class="comment">//双指针滑动窗口</span></span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">max</span>=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> n = s.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;j&lt;n;j++)&#123;<span class="comment">//当前判断是否重复的串为s[i..j]</span></span><br><span class="line">        hashmap[s[j]]++;</span><br><span class="line">        <span class="keyword">while</span>(hashmap[s[j]]&gt;<span class="number">1</span>)&#123;</span><br><span class="line">            hashmap[s[i++]]--;  <span class="comment">//i指针右移</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j-i+<span class="number">1</span>&gt;<span class="built_in">max</span>)</span><br><span class="line">            <span class="built_in">max</span> = j-i+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">max</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="2、优化的滑动窗口"><a href="#2、优化的滑动窗口" class="headerlink" title="2、优化的滑动窗口"></a>2、优化的滑动窗口</h1><blockquote>
-<p>The reason is that if $s[j]$ have a duplicate in the range $[i, j)$ with index $j’$, we don’t need to increase ii little by little. We can skip all the elements in the range $[i,j′] $and let $i$ to be $j’ + 1$directly.</p>
-</blockquote>
-<blockquote>
-<ul>
-<li>Time complexity : O(n). Index j will iterate n times.</li>
-<li>Space complexity (HashMap) : O(min(m, n)). Same as the previous approach.</li>
-<li>Space complexity (Table): O(m). mm is the size of the charset.</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>the basic idea is, keep a hashmap which stores the characters in string as keys and their positions as values, and keep two pointers which define the max substring. move the right pointer to scan through the string , and meanwhile update the hashmap. If the character is already in the hashmap, then move the left pointer to the right of the same character last found. Note that the two pointers can only move forward.</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">if</span> (s.length()==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">     HashMap&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">     <span class="keyword">int</span> max=<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>; i&lt;s.length(); ++i)&#123;</span><br><span class="line">         <span class="keyword">if</span> (map.containsKey(s.charAt(i)))&#123;</span><br><span class="line">             j = Math.max(j,map.get(s.charAt(i))+<span class="number">1</span>);</span><br><span class="line">         &#125;</span><br><span class="line">         map.put(s.charAt(i),i);</span><br><span class="line">         max = Math.max(max,i-j+<span class="number">1</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> max;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = s.length(), ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] index = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">128</span>]; <span class="comment">// current index of character</span></span><br><span class="line">        <span class="comment">// try to extend the range [i, j]</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>, i = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            i = Math.max(index[s.charAt(j)], i);</span><br><span class="line">            ans = Math.max(ans, j - i + <span class="number">1</span>);</span><br><span class="line">            index[s.charAt(j)] = j + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="3-另一种滑动窗口"><a href="#3-另一种滑动窗口" class="headerlink" title="3.另一种滑动窗口"></a>3.另一种滑动窗口</h1><blockquote>
-<p>我们不妨以示例一中的字符串 \texttt{abcabcbb}abcabcbb 为例，找出 从每一个字符开始的，不包含重复字符的最长子串，那么其中最长的那个字符串即为答案。对于示例一中的字符串，我们列举出这些结果，其中括号中表示选中的字符以及最长的字符串：</p>
-<p>$以 \texttt{(a)bcabcbb} 开始的最长字符串为 \texttt{(abc)abcbb}；\<br>以 \texttt{a(b)cabcbb} 开始的最长字符串为 \texttt{a(bca)bcbb}；\<br>以 \texttt{ab(c)abcbb} 开始的最长字符串为 \texttt{ab(cab)cbb}；\<br>以 \texttt{abc(a)bcbb} 开始的最长字符串为 \texttt{abc(abc)bb}；\<br>以 \texttt{abca(b)cbb} 开始的最长字符串为 \texttt{abca(bc)bb}；\<br>以 \texttt{abcab(c)bb} 开始的最长字符串为 \texttt{abcab(cb)b}；\<br>以 \texttt{abcabc(b)b} 开始的最长字符串为 \texttt{abcabc(b)b}；\<br>以 \texttt{abcabcb(b)} 开始的最长字符串为 \texttt{abcabcb(b)}。$<br>发现了什么？如果我们依次递增地枚举子串的起始位置，那么子串的结束位置也是递增的！这里的原因在于，假设我们选择字符串中的第 k 个字符作为起始位置，并且得到了不包含重复字符的最长子串的结束位置为 $r_k$ 。那么当我们选择第 k+1个字符作为起始位置时，首先从 k+1 到 $r_k$<br>的字符显然是不重复的，并且由于少了原本的第 k个字符，我们可以尝试继续增大 r_kr，直到右侧出现了重复字符为止。</p>
-<p>作者：LeetCode-Solution<br>链接：<a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetc-2/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetc-2/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//空字符串</span></span><br><span class="line">        <span class="keyword">if</span>(s==<span class="string">""</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> maxLen = INT_MIN,l=<span class="number">0</span>,r=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dic[<span class="number">128</span>];</span><br><span class="line">        <span class="built_in">memset</span>(dic,<span class="number">0</span>,<span class="keyword">sizeof</span>(dic));</span><br><span class="line">        <span class="keyword">for</span>(l=<span class="number">0</span>;l&lt;s.<span class="built_in">size</span>();l++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(l) dic[s[l<span class="number">-1</span>]]--;</span><br><span class="line">            <span class="keyword">while</span>(dic[s[r]]==<span class="number">0</span>&amp;&amp;r&lt;s.<span class="built_in">size</span>())&#123;</span><br><span class="line">                maxLen = <span class="built_in">max</span>(maxLen,r-l+<span class="number">1</span>);</span><br><span class="line">                dic[s[r]]++;</span><br><span class="line">                r++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxLen;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
+          <img src="/2020/08/06/leetcode3%EF%BC%9A%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/1596712159058.png" class="" width="1596712159058">
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/06/leetcode3%EF%BC%9A%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1197,10 +1156,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-08-02 00:01:01 / Modified: 00:16:20" itemprop="dateCreated datePublished" datetime="2020-08-02T00:01:01+08:00">2020-08-02</time>
+              <time title="Created: 2020-08-02 00:01:01" itemprop="dateCreated datePublished" datetime="2020-08-02T00:01:01+08:00">2020-08-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-06 19:11:01" itemprop="dateModified" datetime="2020-08-06T19:11:01+08:00">2020-08-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1250,22 +1215,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-
-<a id="more"></a>
-
-<p>本题使用递归处理，具体流程可以参考：</p>
-<p><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/yi-kan-jiu-hui-yi-xie-jiu-fei-xiang-jie-di-gui-by-/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/yi-kan-jiu-hui-yi-xie-jiu-fei-xiang-jie-di-gui-by-/</a></p>
-<p><strong>时间复杂度：</strong>$O(m+n)$</p>
-<blockquote>
-<p>给出一个递归算法，其时间复杂度 ${\mathcal{O}(T)}$ 通常是递归调用的数量（记作 ${R}$） 和计算的时间复杂度的乘积（表示为 ${\mathcal{O}(s)})$的乘积：${\mathcal{O}(T) = R * \mathcal{O}(s)}O(T)=R∗O(s)$</p>
-</blockquote>
-<p>设n，m为两个链表的长度。本题的递归调用数量，最坏情况下为$O(m+n)$，每次计算需要耗费$O(1)$的时间。所以空间复杂度为$O(m+n)$</p>
-<p><strong>空间复杂度：</strong>$O(m+n)$</p>
-<p>在递归结束前，已经调用了$O(m+n)$次该函数，所以也调用了那么多的栈帧。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!l1)&#123;</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!l2)&#123;</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(l1-&gt;val&lt;l2-&gt;val)&#123;</span><br><span class="line">            l1-&gt;next = mergeTwoLists(l1-&gt;next,l2);</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            l2-&gt;next = mergeTwoLists(l1,l2-&gt;next);</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
+          <img src="/2020/08/02/leetcode%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0%EF%BC%9A%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/1596712240928.png" class="" width="1596712240928">
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/02/leetcode%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0%EF%BC%9A%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
