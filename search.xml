@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>biliBara_el-scrollbar</title>
+    <url>/2020/05/25/biliBara-el-scrollbar/</url>
+    <content><![CDATA[<p>element-ui中的el-scrollbar的使用总结</p>
+<a id="more"></a>
+
+<p>借鉴：<br><a href="https://segmentfault.com/a/1190000015068613" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015068613</a><br><a href="https://segmentfault.com/a/1190000019325694?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000019325694?utm_source=tag-newest</a></p>
+<p>#1.工作原理：<br>总的来说el-scrollbar就是一个wrapper，包裹住要使用scroll的区域。而包裹el-scrollbar的元素要设置成overflow: hidden</p>
+<img src="/2020/05/25/biliBara-el-scrollbar/17071720-c586a0d4ecb2a289.png" class="" title="图片.png">
+<p>#2.使用<br>设置el-scrollbar的父元素（比如#app，html和body）以及el-scrollbar本身</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#app</span>, <span class="selector-tag">html</span>, <span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.page-component__scroll</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>想要应用横轴的话还要加上</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.el-scrollbar &gt;&gt;&gt; .el-scrollbar__wrap</span><br><span class="line">  overflow-x: hidden</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>biliBara</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>element-ui</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BigIntegerRealize</title>
     <url>/2020/06/22/BigIntegerRealize/</url>
     <content><![CDATA[<p>要求实现大整数的加减乘除，开方，幂运算，实现ui界面，文本输入输出</p>
@@ -91,29 +114,6 @@ if (fileDialog-&gt;exec()) {
       <tags>
         <tag>c++</tag>
         <tag>acm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>biliBara_el-scrollbar</title>
-    <url>/2020/05/25/biliBara-el-scrollbar/</url>
-    <content><![CDATA[<p>element-ui中的el-scrollbar的使用总结</p>
-<a id="more"></a>
-
-<p>借鉴：<br><a href="https://segmentfault.com/a/1190000015068613" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015068613</a><br><a href="https://segmentfault.com/a/1190000019325694?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000019325694?utm_source=tag-newest</a></p>
-<p>#1.工作原理：<br>总的来说el-scrollbar就是一个wrapper，包裹住要使用scroll的区域。而包裹el-scrollbar的元素要设置成overflow: hidden</p>
-<img src="/2020/05/25/biliBara-el-scrollbar/17071720-c586a0d4ecb2a289.png" class="" title="图片.png">
-<p>#2.使用<br>设置el-scrollbar的父元素（比如#app，html和body）以及el-scrollbar本身</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#app</span>, <span class="selector-tag">html</span>, <span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.page-component__scroll</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>想要应用横轴的话还要加上</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.el-scrollbar &gt;&gt;&gt; .el-scrollbar__wrap</span><br><span class="line">  overflow-x: hidden</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>biliBara</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-        <tag>element-ui</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
