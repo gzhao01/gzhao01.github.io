@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="a green hand in coding, gaming and animation">
+  <meta name="description" content="interested in coding, gaming and animation">
 <meta property="og:type" content="website">
 <meta property="og:title" content="gzhao01&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="gzhao01&#39;s blog">
-<meta property="og:description" content="a green hand in coding, gaming and animation">
+<meta property="og:description" content="interested in coding, gaming and animation">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="gzhao01">
 <meta property="article:tag" content="machine learning">
 <meta property="article:tag" content=" vue">
 <meta property="article:tag" content=" python">
+<meta property="article:tag" content=" leetcode">
+<meta property="article:tag" content=" c++">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/page/3/">
@@ -121,17 +123,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">35</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">10</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">28</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">30</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -191,12 +193,224 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/05/pytorchSet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/smileMan.jpg">
+      <meta itemprop="name" content="gzhao01">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gzhao01's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/05/pytorchSet/" class="post-title-link" itemprop="url">pytorch+anoconda+pycharm安装</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-07-05 12:21:09" itemprop="dateCreated datePublished" datetime="2020-07-05T12:21:09+08:00">2020-07-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-06 06:08:42" itemprop="dateModified" datetime="2020-07-06T06:08:42+08:00">2020-07-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/machine-learning/" itemprop="url" rel="index"><span itemprop="name">machine learning</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/07/05/pytorchSet/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/05/pytorchSet/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>pytorch+anoconda+pycharm安装</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/05/pytorchSet/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/BigIntegerRealize/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/smileMan.jpg">
+      <meta itemprop="name" content="gzhao01">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gzhao01's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/22/BigIntegerRealize/" class="post-title-link" itemprop="url">BigIntegerRealize</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-06-22 21:09:52 / Modified: 21:20:53" itemprop="dateCreated datePublished" datetime="2020-06-22T21:09:52+08:00">2020-06-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/school/" itemprop="url" rel="index"><span itemprop="name">school</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/06/22/BigIntegerRealize/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/22/BigIntegerRealize/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>812</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>要求实现大整数的加减乘除，开方，幂运算，实现ui界面，文本输入输出</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/22/BigIntegerRealize/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/22/Ntop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/smileMan.jpg">
       <meta itemprop="name" content="gzhao01">
-      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -297,9 +511,9 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/09/vim-command/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/smileMan.jpg">
       <meta itemprop="name" content="gzhao01">
-      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -400,9 +614,9 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/hexo-hover-style-realize/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/smileMan.jpg">
       <meta itemprop="name" content="gzhao01">
-      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -504,9 +718,9 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/biliBara-liveStreaming/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/smileMan.jpg">
       <meta itemprop="name" content="gzhao01">
-      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -613,9 +827,9 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/25/biliBara-el-scrollbar/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/smileMan.jpg">
       <meta itemprop="name" content="gzhao01">
-      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -716,9 +930,9 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/25/hexo-build/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/smileMan.jpg">
       <meta itemprop="name" content="gzhao01">
-      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -825,9 +1039,9 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/24/biliBara/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/smileMan.jpg">
       <meta itemprop="name" content="gzhao01">
-      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -935,9 +1149,9 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/23/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="image" content="/images/smileMan.jpg">
       <meta itemprop="name" content="gzhao01">
-      <meta itemprop="description" content="a green hand in coding, gaming and animation">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1090,29 +1304,29 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="gzhao01"
-      src="/images/avatar.jpg">
+      src="/images/smileMan.jpg">
   <p class="site-author-name" itemprop="name">gzhao01</p>
-  <div class="site-description" itemprop="description">a green hand in coding, gaming and animation</div>
+  <div class="site-description" itemprop="description">interested in coding, gaming and animation</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1153,12 +1367,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">46k</span>
+    <span title="Symbols count total">70k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">42 mins.</span>
+    <span title="Reading time total">1:03</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
