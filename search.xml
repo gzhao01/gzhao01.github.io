@@ -95,6 +95,28 @@
       </tags>
   </entry>
   <entry>
+    <title>connect to host github.com port 22 Operation timed out</title>
+    <url>/2020/08/07/FatalgitConnection/</url>
+    <content><![CDATA[<p>hexo push到git时报错</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh: connect to host github.com port 22: Operation timed out</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>这是因为防火墙的原因，把访问端口屏蔽了。</p>
+<p><a href="https://stackoverflow.com/questions/7953806/github-ssh-via-public-wifi-port-22-blocked/8081292#8081292" target="_blank" rel="noopener">https://stackoverflow.com/questions/7953806/github-ssh-via-public-wifi-port-22-blocked/8081292#8081292</a></p>
+<p>Try this:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ vim ~&#x2F;.ssh&#x2F;config</span><br></pre></td></tr></table></figure>
+
+<p>Add</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  Port 443</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo美化</title>
     <url>/2020/08/07/hexo%E7%BE%8E%E5%8C%96/</url>
     <content><![CDATA[<p>对hexo的next主题进行进一步的个性化</p>
