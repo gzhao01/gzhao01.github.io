@@ -1,1 +1,10 @@
 https://www.gzhao01.top/2020/08/07/hexo%E7%BE%8E%E5%8C%96/
+https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/
+https://www.gzhao01.top/2020/08/06/leetcode53%EF%BC%9A%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/
+https://www.gzhao01.top/2020/08/06/leetcode7%EF%BC%9A%E6%95%B4%E6%95%B0%E7%BF%BB%E8%BD%AC/
+https://www.gzhao01.top/2020/08/06/leetcode3%EF%BC%9A%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/
+https://www.gzhao01.top/2020/08/03/leetcode76%EF%BC%9A%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/
+https://www.gzhao01.top/2020/08/03/leetcode%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/
+https://www.gzhao01.top/2020/08/03/leetcode-top100%EF%BC%9A%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/
+https://www.gzhao01.top/2020/08/02/leetcode%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%95%E5%BC%80%E4%B8%BA%E9%93%BE%E8%A1%A8/
+https://www.gzhao01.top/2020/08/02/leetcode-top100%EF%BC%9A%E4%B8%A4%E8%BE%86%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/
