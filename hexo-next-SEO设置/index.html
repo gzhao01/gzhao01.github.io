@@ -16,10 +16,11 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.gzhao01.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.gzhao01.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="对hexo进行百度和google的seo设置和优化">
@@ -33,8 +34,10 @@
 <meta property="og:image" content="https://www.gzhao01.top/hexo-next-SEO%E8%AE%BE%E7%BD%AE/1596920200169.png">
 <meta property="og:image" content="https://www.gzhao01.top/hexo-next-SEO%E8%AE%BE%E7%BD%AE/3.png">
 <meta property="og:image" content="https://www.gzhao01.top/hexo-next-SEO%E8%AE%BE%E7%BD%AE/1596921909712.png">
+<meta property="og:image" content="https://www.gzhao01.top/hexo-next-SEO%E8%AE%BE%E7%BD%AE/1596925377152.png">
+<meta property="og:image" content="https://www.gzhao01.top/hexo-next-SEO%E8%AE%BE%E7%BD%AE/v2-1cf2d18e29eec3dcefe9997e607a0520_720w.jpg">
 <meta property="article:published_time" content="2020-08-08T20:46:16.000Z">
-<meta property="article:modified_time" content="2020-08-08T22:21:08.893Z">
+<meta property="article:modified_time" content="2020-08-08T22:39:26.942Z">
 <meta property="article:author" content="gzhao01">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="seo">
@@ -139,7 +142,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">41</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -226,7 +229,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-09 04:46:16 / Modified: 06:21:08" itemprop="dateCreated datePublished" datetime="2020-08-09T04:46:16+08:00">2020-08-09</time>
+              <time title="Created: 2020-08-09 04:46:16 / Modified: 06:39:26" itemprop="dateCreated datePublished" datetime="2020-08-09T04:46:16+08:00">2020-08-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2k</span>
+              <span>2.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -334,7 +337,12 @@
 <h1 id="3-robot-txt"><a href="#3-robot-txt" class="headerlink" title="3.robot.txt"></a>3.robot.txt</h1><p>在根目录的source下面添加该文件即可</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># hexo robots.txt</span><br><span class="line">User-agent: *</span><br><span class="line">Allow: &#x2F;</span><br><span class="line">Allow: &#x2F;archives&#x2F;</span><br><span class="line">Allow: &#x2F;categories&#x2F;</span><br><span class="line">Allow: &#x2F;tags&#x2F;</span><br><span class="line"></span><br><span class="line">Disallow: &#x2F;vendors&#x2F;</span><br><span class="line">Disallow: &#x2F;js&#x2F;</span><br><span class="line">Disallow: &#x2F;css&#x2F;</span><br><span class="line">Disallow: &#x2F;fonts&#x2F;</span><br><span class="line">Disallow: &#x2F;vendors&#x2F;</span><br><span class="line">Disallow: &#x2F;fancybox&#x2F;</span><br><span class="line"></span><br><span class="line">Sitemap: http:&#x2F;&#x2F;www.gzhao01.top&#x2F;sitemap.xml</span><br><span class="line">Sitemap: http:&#x2F;&#x2F;www.gzhao01.top&#x2F;baidusitemap.xml</span><br></pre></td></tr></table></figure>
 
+<h1 id="4-SEO优化"><a href="#4-SEO优化" class="headerlink" title="4.SEO优化"></a>4.SEO优化</h1><h3 id="1-url优化"><a href="#1-url优化" class="headerlink" title="1.url优化"></a>1.url优化</h3><img src="/hexo-next-SEO%E8%AE%BE%E7%BD%AE/1596925377152.png" class="" width="1596925377152">
 
+<p>原先的hexo文章是如上的格式，这样子对搜索引擎很不友好，因为网页深度越深，搜索引擎对其的搜索效果也就越差，所以将其改成:title/即可</p>
+<h3 id="2-镜像仓库"><a href="#2-镜像仓库" class="headerlink" title="2.镜像仓库"></a>2.镜像仓库</h3><p><a href="https://zhuanlan.zhihu.com/p/33333345" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33333345</a></p>
+<p>准确来说就是通过DNS解析，将百度的解析路径改变成coding界面的git仓库。</p>
+<img src="/hexo-next-SEO%E8%AE%BE%E7%BD%AE/v2-1cf2d18e29eec3dcefe9997e607a0520_720w.jpg" class="" title="img">
     </div>
 
     
@@ -356,7 +364,10 @@
     <a href="/leetcode215%EF%BC%9A%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0/" rel="prev" title="leetcode215：数组中的第K个最大元素">
       <i class="fa fa-chevron-left"></i> leetcode215：数组中的第K个最大元素
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/hexo%E7%9A%84%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/" rel="next" title="hexo的项目结构">
+      hexo的项目结构 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -416,7 +427,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-百度SEO"><span class="nav-number">1.</span> <span class="nav-text">1.百度SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.验证</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CNAME验证："><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">CNAME验证：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML验证："><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">HTML验证：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-推送"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.推送</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-next推送功能"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">1.next推送功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-api推送"><span class="nav-number">1.0.2.0.2.</span> <span class="nav-text">2.api推送</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-sitemap"><span class="nav-number">1.0.2.0.3.</span> <span class="nav-text">3.sitemap</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-google"><span class="nav-number">2.</span> <span class="nav-text">2.google</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-提交sitemap"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.提交sitemap</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-robot-txt"><span class="nav-number">3.</span> <span class="nav-text">3.robot.txt</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-百度SEO"><span class="nav-number">1.</span> <span class="nav-text">1.百度SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.验证</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CNAME验证："><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">CNAME验证：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML验证："><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">HTML验证：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-推送"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.推送</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-next推送功能"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">1.next推送功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-api推送"><span class="nav-number">1.0.2.0.2.</span> <span class="nav-text">2.api推送</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-sitemap"><span class="nav-number">1.0.2.0.3.</span> <span class="nav-text">3.sitemap</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-google"><span class="nav-number">2.</span> <span class="nav-text">2.google</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-提交sitemap"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.提交sitemap</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-robot-txt"><span class="nav-number">3.</span> <span class="nav-text">3.robot.txt</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-SEO优化"><span class="nav-number">4.</span> <span class="nav-text">4.SEO优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-url优化"><span class="nav-number">4.0.1.</span> <span class="nav-text">1.url优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-镜像仓库"><span class="nav-number">4.0.2.</span> <span class="nav-text">2.镜像仓库</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -432,7 +443,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -492,19 +503,19 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">92k</span>
+    <span title="Symbols count total">94k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:24</span>
+    <span title="Reading time total">1:25</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
@@ -538,6 +549,9 @@
   
   <script color='0.0.0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -551,11 +565,70 @@
 
 <script src="/js/next-boot.js"></script>
 
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
 
 
 
   
-  <script>
+  <script data-pjax>
     (function(){
       var canonicalURL, curProtocol;
       //Get the <link> tag
@@ -599,6 +672,7 @@
 
 
 
+    <div id="pjax">
   
 
   
@@ -632,5 +706,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 });
 </script>
 
+    </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>

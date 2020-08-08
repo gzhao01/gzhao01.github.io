@@ -16,10 +16,11 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.gzhao01.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.gzhao01.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="本文是讲解将多物体的多材质烘焙到一个贴图上的方法。 要说明的是，这里小白一个，首先可以先看一下视频，如果做不出来再看本文，因为本文只是指出了要注意的细节，此外如有错误也欢迎指出和讨论..https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;9airvjDaVh4&amp;list&#x3D;PLj6G-3M0NXNXGGPSPXBTC1H04NPxk96Eo&amp;index&#x3D;18&amp;t&#x3D;">
@@ -29,21 +30,21 @@
 <meta property="og:site_name" content="gzhao01&#39;s blog">
 <meta property="og:description" content="本文是讲解将多物体的多材质烘焙到一个贴图上的方法。 要说明的是，这里小白一个，首先可以先看一下视频，如果做不出来再看本文，因为本文只是指出了要注意的细节，此外如有错误也欢迎指出和讨论..https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;9airvjDaVh4&amp;list&#x3D;PLj6G-3M0NXNXGGPSPXBTC1H04NPxk96Eo&amp;index&#x3D;18&amp;t&#x3D;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-263c377d587b4a51.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-7a4a06a4528bfd41.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-52ffa5918c59dc3b.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-9a9c11a5dbc295e9.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-001343e738e56ff2.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-48304b0d4f8277a2.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-80df83722164165b.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-abee8e933c37ff58.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-91b11c63053de14a.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-23a8308842ba6637.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-9563b93276465948.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-7834a1b7165fa29b.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-01b9981002df842e.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-3ec35fd8263aab9b.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-224fb2c541ece681.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-263c377d587b4a51.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-7a4a06a4528bfd41.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-52ffa5918c59dc3b.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-9a9c11a5dbc295e9.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-001343e738e56ff2.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-48304b0d4f8277a2.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-80df83722164165b.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-abee8e933c37ff58.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-91b11c63053de14a.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-23a8308842ba6637.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-9563b93276465948.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-7834a1b7165fa29b.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-01b9981002df842e.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-3ec35fd8263aab9b.png">
+<meta property="og:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-224fb2c541ece681.png">
 <meta property="article:published_time" content="2020-07-25T11:06:01.000Z">
 <meta property="article:modified_time" content="2020-08-07T15:36:02.275Z">
 <meta property="article:author" content="gzhao01">
@@ -51,7 +52,7 @@
 <meta property="article:tag" content="unity">
 <meta property="article:tag" content="photoshop">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.gzhao01.top/2020/07/25/blender-bake-multiple-into-one/17071720-263c377d587b4a51.png">
+<meta name="twitter:image" content="https://www.gzhao01.top/blender-bake-multiple-into-one/17071720-263c377d587b4a51.png">
 
 <link rel="canonical" href="https://www.gzhao01.top/blender-bake-multiple-into-one/">
 
@@ -151,7 +152,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">41</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -311,7 +312,7 @@
 <a id="more"></a>
 
 <h1 id="1-页面布局"><a href="#1-页面布局" class="headerlink" title="1.页面布局"></a>1.页面布局</h1><p>blender烘焙需要用到shader、UV editor以及3dviewport界面，将界面布置好更有利于操作</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-263c377d587b4a51.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-263c377d587b4a51.png" class="" title="图片.png">
 <h1 id="2-烘焙前的准备"><a href="#2-烘焙前的准备" class="headerlink" title="2.烘焙前的准备"></a>2.烘焙前的准备</h1><p>烘焙需要准备三点</p>
 <ol>
 <li>一个全新的UV贴图</li>
@@ -320,47 +321,47 @@
 </ol>
 <h3 id="1-创建新图像"><a href="#1-创建新图像" class="headerlink" title="1.创建新图像"></a>1.创建新图像</h3><p>首先要创建一个新的图像，要注意的是这个<strong>图像要进行save as和save两步操作</strong>，让其保存在电脑的硬盘上，否则最后的烘焙会报”circular depandancy…”的信息，这个信息就是没找到需要导出的图像而导致图像载入到自己身上。原因大概是因为，不这样做，blender会无法检测到新图像。</p>
 <h3 id="2-UV展开"><a href="#2-UV展开" class="headerlink" title="2.UV展开"></a>2.UV展开</h3><p>进行UV展开前，先新建一个UV贴图，并将该新贴图选定。</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-7a4a06a4528bfd41.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-7a4a06a4528bfd41.png" class="" title="图片.png">
 <p>然后进入edit模式，按u键进行UV展开。</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-52ffa5918c59dc3b.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-52ffa5918c59dc3b.png" class="" title="图片.png">
 <p>UV展开这里因为是高模，可以选择unwrap或者smart UV project。二者的区别在于，smart UV project可以进行个性化的展开。此外，低模也可以选择lightmap pack。<br>然后就可以发现，图片上出现了UV展开的节点，其实这里这些UV节点就保存到了刚刚新建的UV贴图里面了。</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-9a9c11a5dbc295e9.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-9a9c11a5dbc295e9.png" class="" title="图片.png">
 <h3 id="3-node节点设置"><a href="#3-node节点设置" class="headerlink" title="3.node节点设置"></a>3.node节点设置</h3><p>之后在每个材质的shader界面里，新增一个image texture节点，该节点的图片就指向你要导出的那个图片。<br><strong>注意</strong>：</p>
 <ol>
 <li>该节点要给每个要导出的材质添加</li>
-<li>该节点必须要激活（active）！！！，也就是有白色边框 <img src="/2020/07/25/blender-bake-multiple-into-one/17071720-001343e738e56ff2.png" class="" title="图片.png">
+<li>该节点必须要激活（active）！！！，也就是有白色边框 <img src="/blender-bake-multiple-into-one/17071720-001343e738e56ff2.png" class="" title="图片.png">
  因为这样子操作非常麻烦，所以我写了一个脚本给每个模型的每个材质都添加这个节点，只要白get后的图片名称改成自己的即可。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> obj <span class="keyword">in</span> bpy.data.objects:</span><br><span class="line">    <span class="keyword">for</span> material <span class="keyword">in</span> obj.data.materials:</span><br><span class="line">        tochangeNode = material.node_tree.nodes.new(<span class="string">"ShaderNodeTexImage"</span>)</span><br><span class="line">        tochangeNode.image = bpy.data.images.get(<span class="string">"kokoro2"</span>) //change name here </span><br><span class="line">        tochangeNode.location = Vector((<span class="number">377</span>,<span class="number">-141</span>))</span><br><span class="line">//active the node</span><br><span class="line">        material.node_tree.nodes.active = tochangeNode</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <h1 id="3-开始烘焙"><a href="#3-开始烘焙" class="headerlink" title="3.开始烘焙"></a>3.开始烘焙</h1><p>烘焙必须在cycle下进行</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-48304b0d4f8277a2.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-48304b0d4f8277a2.png" class="" title="图片.png">
 <p>比较常用的烘焙模式为combined,diffuse,normal模式。<br>combined模式就是讲光影效果、阴影效果等等全部烘焙到贴图上。<br>diffuse可以选择只烘焙材质的颜色。<br>normal是法线贴图，可以给贴图丰富细节的同时又不消耗性能。<br>这里要导出到unity中，所以选择diffuse和normal模式</p>
 <h3 id="1-diffuse"><a href="#1-diffuse" class="headerlink" title="1.diffuse"></a>1.diffuse</h3><p>按下面的选项勾选，margin在贴图烘焙重叠时，可以改的小一些。此外如果是多个物体烘焙需要勾选selected to active，我这里用ctrl+j合并了物体，所以不能勾选。</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-80df83722164165b.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-80df83722164165b.png" class="" title="图片.png">
 
 <h3 id="2-normal"><a href="#2-normal" class="headerlink" title="2.normal"></a>2.normal</h3><p>因为要新建个图片烘焙，所以这里用另一个脚本更改节点的图片名称</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for obj in bpy.data.objects:</span><br><span class="line">    for material in obj.data.materials:</span><br><span class="line">        tochangeNode &#x3D; material.node_tree.nodes[-1]</span><br><span class="line">        tochangeNode.image &#x3D; bpy.data.images.get(&quot;kokoro_normal&quot;)</span><br></pre></td></tr></table></figure>
 
 <p>最后烘焙结束后，要记住点击save保存，烘焙才会生效</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-abee8e933c37ff58.png" class="">
+<img src="/blender-bake-multiple-into-one/17071720-abee8e933c37ff58.png" class="">
 
 <h1 id="4-其他设定"><a href="#4-其他设定" class="headerlink" title="4.其他设定"></a>4.其他设定</h1><p>复制刚才的模型，并且删除所有模型，将刚刚的贴图制作成材质来测试一下烘焙效果。发现hair、eyelash、eyeball都全黑了。</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-91b11c63053de14a.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-91b11c63053de14a.png" class="" title="图片.png">
 <p>再看贴图，这是因为本该透明的部分被黑色填充的结果。这个问题可以用gloss烘焙来解决。</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-23a8308842ba6637.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-23a8308842ba6637.png" class="" title="图片.png">
 
 <p>按照之前的步骤，再进行gloss烘焙，得到的就是alpha通道的结果。白色代表要显示的部分，黑色的代表透明部分。</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-9563b93276465948.png" class="">
+<img src="/blender-bake-multiple-into-one/17071720-9563b93276465948.png" class="">
 <p>打开ps将diffuse和gloss贴图导入。<br>给diffuse贴图添加一个蒙版，然后点击gloss贴图ctrl+a全选，ctrl+c复制，按住alt键点击多出来的蒙版，然后ctrl+v粘贴。最后就会得到两者合并的结果</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-7834a1b7165fa29b.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-7834a1b7165fa29b.png" class="" title="图片.png">
 <p>然后到处PNG格式图片（PNG支持alpha通道）</p>
 <p>回到blender，如图所示设置，即可完成结果</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-01b9981002df842e.png" class="" title="图片.png">
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-3ec35fd8263aab9b.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-01b9981002df842e.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-3ec35fd8263aab9b.png" class="" title="图片.png">
 
 <h1 id="5-导入unity"><a href="#5-导入unity" class="headerlink" title="5.导入unity"></a>5.导入unity</h1><p>将模型导出为fbx格式，如图所示勾选，即可将材质放入导出的fbx文件中</p>
-<img src="/2020/07/25/blender-bake-multiple-into-one/17071720-224fb2c541ece681.png" class="" title="图片.png">
+<img src="/blender-bake-multiple-into-one/17071720-224fb2c541ece681.png" class="" title="图片.png">
 <p>在unity中打开，但发现人物的眼睛、睫毛、头发仍然存在刚才的问题。<br>这是因为render mode中选择了opaque模式，这个模式是不考虑alpha通道的，之后选择cutoff模式即可。<br>不过这种模式下，发现睫毛和头发部分表现效果并不理想。解决方法是将这两个部分单独拎出来烘焙，然后选择fade效果。此外如果眼睛部分选择transparent效果，还可以实现眼睛的反光。</p>
 <p>参考：<br><a href="https://blender.stackexchange.com/questions/44525/cycles-bake-script-error-circular-dependency" target="_blank" rel="noopener">https://blender.stackexchange.com/questions/44525/cycles-bake-script-error-circular-dependency</a><br><a href="https://blender.stackexchange.com/questions/47052/what-is-the-difference-between-unwrap-and-smart-uv-project" target="_blank" rel="noopener">https://blender.stackexchange.com/questions/47052/what-is-the-difference-between-unwrap-and-smart-uv-project</a><br><a href="https://blenderartists.org/t/texture-bake-alpha/407849/5" target="_blank" rel="noopener">https://blenderartists.org/t/texture-bake-alpha/407849/5</a></p>
 
@@ -465,7 +466,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -525,19 +526,19 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">92k</span>
+    <span title="Symbols count total">94k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:24</span>
+    <span title="Reading time total">1:25</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
@@ -571,6 +572,9 @@
   
   <script color='0.0.0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -584,11 +588,70 @@
 
 <script src="/js/next-boot.js"></script>
 
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
 
 
 
   
-  <script>
+  <script data-pjax>
     (function(){
       var canonicalURL, curProtocol;
       //Get the <link> tag
@@ -632,6 +695,7 @@
 
 
 
+    <div id="pjax">
   
 
   
@@ -665,5 +729,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 });
 </script>
 
+    </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>

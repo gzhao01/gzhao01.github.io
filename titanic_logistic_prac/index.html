@@ -16,10 +16,11 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.gzhao01.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.gzhao01.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="https:&#x2F;&#x2F;blog.csdn.net&#x2F;han_xiaoyang&#x2F;article&#x2F;details&#x2F;49797143本篇文章只是进行简单的复原">
@@ -29,21 +30,21 @@
 <meta property="og:site_name" content="gzhao01&#39;s blog">
 <meta property="og:description" content="https:&#x2F;&#x2F;blog.csdn.net&#x2F;han_xiaoyang&#x2F;article&#x2F;details&#x2F;49797143本篇文章只是进行简单的复原">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/output_7_0.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/output_9_2.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/output_12_1.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/output_14_2.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/output_22_1.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/output_44_0.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/1596729100632.png">
-<meta property="og:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/100f3a39031e73bd0a8.jpg">
+<meta property="og:image" content="https://www.gzhao01.top/titanic_logistic_prac/output_7_0.png">
+<meta property="og:image" content="https://www.gzhao01.top/titanic_logistic_prac/output_9_2.png">
+<meta property="og:image" content="https://www.gzhao01.top/titanic_logistic_prac/output_12_1.png">
+<meta property="og:image" content="https://www.gzhao01.top/titanic_logistic_prac/output_14_2.png">
+<meta property="og:image" content="https://www.gzhao01.top/titanic_logistic_prac/output_22_1.png">
+<meta property="og:image" content="https://www.gzhao01.top/titanic_logistic_prac/output_44_0.png">
+<meta property="og:image" content="https://www.gzhao01.top/titanic_logistic_prac/1596729100632.png">
+<meta property="og:image" content="https://www.gzhao01.top/titanic_logistic_prac/100f3a39031e73bd0a8.jpg">
 <meta property="article:published_time" content="2020-08-06T15:14:27.000Z">
 <meta property="article:modified_time" content="2020-08-06T15:53:27.249Z">
 <meta property="article:author" content="gzhao01">
 <meta property="article:tag" content="machine learning">
 <meta property="article:tag" content="kaggle">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.gzhao01.top/2020/08/06/titanic_logistic_prac/output_7_0.png">
+<meta name="twitter:image" content="https://www.gzhao01.top/titanic_logistic_prac/output_7_0.png">
 
 <link rel="canonical" href="https://www.gzhao01.top/titanic_logistic_prac/">
 
@@ -143,7 +144,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">41</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -645,7 +646,7 @@ memory usage: 83.7+ KB</code></pre><figure class="highlight python"><table><tr><
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt </span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'KaiTi'</span>] <span class="comment">#字体</span></span><br><span class="line">plt.rcParams[<span class="string">'font.serif'</span>] = [<span class="string">'KaiTi'</span>]</span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="literal">False</span></span><br><span class="line">plt.rcParams[<span class="string">'figure.figsize'</span>] = (<span class="number">10.0</span>, <span class="number">8.0</span>) <span class="comment">#改变图片大小</span></span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line">fig.set(alpha=<span class="number">0.2</span>) <span class="comment">#图表颜色alpha</span></span><br><span class="line"></span><br><span class="line">plt.subplot2grid((<span class="number">2</span>,<span class="number">3</span>),(<span class="number">0</span>,<span class="number">0</span>)) <span class="comment">#划分成小图</span></span><br><span class="line">data_train.Survived.value_counts().plot(kind=<span class="string">'bar'</span>)</span><br><span class="line">plt.title(<span class="string">u"survived(1 as survived)"</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot2grid((<span class="number">2</span>,<span class="number">3</span>),(<span class="number">0</span>,<span class="number">1</span>))</span><br><span class="line">data_train.Pclass.value_counts().plot(kind=<span class="string">"bar"</span>)</span><br><span class="line">plt.ylabel(<span class="string">u"人数"</span>)</span><br><span class="line">plt.title(<span class="string">u"乘客等级分布"</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot2grid((<span class="number">2</span>,<span class="number">3</span>),(<span class="number">0</span>,<span class="number">2</span>))</span><br><span class="line">plt.scatter(data_train.Survived, data_train.Age)</span><br><span class="line">plt.ylabel(<span class="string">u"年龄"</span>)</span><br><span class="line">plt.grid(b=<span class="literal">True</span>, which=<span class="string">'major'</span>, axis=<span class="string">'y'</span>)</span><br><span class="line">plt.title(<span class="string">u"年龄和获救分布(1为获救)"</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot2grid((<span class="number">2</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">0</span>),colspan=<span class="number">2</span>)</span><br><span class="line">data_train.Age[data_train.Pclass == <span class="number">1</span>].plot(kind=<span class="string">'kde'</span>)</span><br><span class="line">data_train.Age[data_train.Pclass == <span class="number">2</span>].plot(kind=<span class="string">'kde'</span>)</span><br><span class="line">data_train.Age[data_train.Pclass == <span class="number">3</span>].plot(kind=<span class="string">'kde'</span>)</span><br><span class="line">plt.xlabel(<span class="string">u"年龄"</span>)</span><br><span class="line">plt.ylabel(<span class="string">u"密度"</span>)</span><br><span class="line">plt.title(<span class="string">u"各等级客舱乘客年龄密度分布"</span>)</span><br><span class="line">plt.legend((<span class="string">u"一等"</span>,<span class="string">u"二等"</span>,<span class="string">u"三等"</span>),loc=<span class="string">'best'</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot2grid((<span class="number">2</span>,<span class="number">3</span>),(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line">data_train.Embarked.value_counts().plot(kind=<span class="string">'bar'</span>)</span><br><span class="line">plt.title(<span class="string">u"各登船口岸登船人数"</span>)</span><br><span class="line">plt.ylabel(<span class="string">u"人数"</span>)</span><br><span class="line"></span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 
-<img src="/2020/08/06/titanic_logistic_prac/output_7_0.png" class="" title="png">
+<img src="/titanic_logistic_prac/output_7_0.png" class="" title="png">
 
 
 <p>从上图可以发现，未获救人数较被获救人数多了很多。乘客也普遍分布在三等舱，说明三等舱人数较多，未来要考虑到这个比例问题。各个舱的年龄分布相似，但一等舱年龄偏大。同时S港口登船人数最多。</p>
@@ -660,7 +661,7 @@ memory usage: 83.7+ KB</code></pre><figure class="highlight python"><table><tr><
 
 
 
-&lt;Figure size 720x576 with 0 Axes&gt;</code></pre><img src="/2020/08/06/titanic_logistic_prac/output_9_2.png" class="" title="png">
+&lt;Figure size 720x576 with 0 Axes&gt;</code></pre><img src="/titanic_logistic_prac/output_9_2.png" class="" title="png">
 
 
 <p>可以发现，明显一客舱成员获救比例高，而三客舱成员获救比例低。可能是因为人员密集度，社会地位，财富等原因造成这样的差异。</p>
@@ -672,7 +673,7 @@ memory usage: 83.7+ KB</code></pre><figure class="highlight python"><table><tr><
 
 
 
-<pre><code>&lt;matplotlib.legend.Legend at 0x27ae4edfcc8&gt;</code></pre><img src="/2020/08/06/titanic_logistic_prac/output_12_1.png" class="" title="png">
+<pre><code>&lt;matplotlib.legend.Legend at 0x27ae4edfcc8&gt;</code></pre><img src="/titanic_logistic_prac/output_12_1.png" class="" title="png">
 
 
 <p>可以发现女性获救比例明显高于男性获救比例。</p>
@@ -686,7 +687,7 @@ memory usage: 83.7+ KB</code></pre><figure class="highlight python"><table><tr><
 
 
 
-&lt;Figure size 720x576 with 0 Axes&gt;</code></pre><img src="/2020/08/06/titanic_logistic_prac/output_14_2.png" class="" title="png">
+&lt;Figure size 720x576 with 0 Axes&gt;</code></pre><img src="/titanic_logistic_prac/output_14_2.png" class="" title="png">
 
 
 <p>可以发现S港里未获救人口比例较高</p>
@@ -732,7 +733,7 @@ Name: Cabin, Length: 147, dtype: int64</code></pre><p>因为没有规律，并�
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure()</span><br><span class="line">fig.set(alpha=<span class="number">0.2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#无Cabin属性</span></span><br><span class="line">Survived_cabin = data_train.Survived[pd.isnull(data_train.Cabin)].value_counts()</span><br><span class="line"><span class="comment">#有Cabin属性</span></span><br><span class="line">Survived_nocabin = data_train.Survived[pd.notnull(data_train.Cabin)].value_counts()</span><br><span class="line">df = pd.DataFrame(&#123;<span class="string">u"无cabin"</span>: Survived_cabin,<span class="string">u"有cabin"</span>:Survived_nocabin&#125;)</span><br><span class="line">df.plot(kind=<span class="string">'bar'</span>,stacked=<span class="literal">True</span>)</span><br><span class="line">plt.title(<span class="string">"不同获救情况的有无cabin比例"</span>)</span><br><span class="line">plt.xlabel(<span class="string">u"1为获救，0为未获救"</span>)</span><br><span class="line">plt.ylabel(<span class="string">u"人数"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 
-<pre><code>&lt;Figure size 720x576 with 0 Axes&gt;</code></pre><img src="/2020/08/06/titanic_logistic_prac/output_22_1.png" class="" title="png">
+<pre><code>&lt;Figure size 720x576 with 0 Axes&gt;</code></pre><img src="/titanic_logistic_prac/output_22_1.png" class="" title="png">
 
 
 <p>以上两张图，可以看出，在第二张图中无论是获救还是未获救，无cabin记录的人数占比都较高。但是第一张图却反映出有cabin记录的人获救比例较高。这是为什么？<br>个人理解是因为条件概率问题。可以发现有cabin记录的人数仅为200多人，占比少数。所以假设有个人，那么这个人无论获救没获救，他是有cabin记录的可能性都会较低，因为本身这个群体占比就低。那么假设有另一个人，这个人是获救的人，那么他极可能就是有cabin记录的人，这样也就符合了第一幅图的描述。</p>
@@ -2003,7 +2004,7 @@ Name: Cabin, Length: 147, dtype: int64</code></pre><p>因为没有规律，并�
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment"># from sklearn.learning_curve import learning_curve  修改以fix learning_curve DeprecationWarning</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> learning_curve</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用sklearn的learning_curve得到training_score和cv_score，使用matplotlib画出learning curve</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_learning_curve</span><span class="params">(estimator, title, X, y, ylim=None, cv=None, n_jobs=<span class="number">1</span>, </span></span></span><br><span class="line"><span class="function"><span class="params">                        train_sizes=np.linspace<span class="params">(<span class="number">.05</span>, <span class="number">1.</span>, <span class="number">20</span>)</span>, verbose=<span class="number">0</span>, plot=True)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    画出data在某模型上的learning curve.</span></span><br><span class="line"><span class="string">    参数解释</span></span><br><span class="line"><span class="string">    ----------</span></span><br><span class="line"><span class="string">    estimator : 你用的分类器。</span></span><br><span class="line"><span class="string">    title : 表格的标题。</span></span><br><span class="line"><span class="string">    X : 输入的feature，numpy类型</span></span><br><span class="line"><span class="string">    y : 输入的target vector</span></span><br><span class="line"><span class="string">    ylim : tuple格式的(ymin, ymax), 设定图像中纵坐标的最低点和最高点</span></span><br><span class="line"><span class="string">    cv : 做cross-validation的时候，数据分成的份数，其中一份作为cv集，其余n-1份作为training(默认为3份)</span></span><br><span class="line"><span class="string">    n_jobs : 并行的的任务数(默认1)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    train_sizes, train_scores, test_scores = learning_curve(</span><br><span class="line">        estimator, X, y, cv=cv, n_jobs=n_jobs, train_sizes=train_sizes, verbose=verbose)</span><br><span class="line">    </span><br><span class="line">    train_scores_mean = np.mean(train_scores, axis=<span class="number">1</span>)</span><br><span class="line">    train_scores_std = np.std(train_scores, axis=<span class="number">1</span>)</span><br><span class="line">    test_scores_mean = np.mean(test_scores, axis=<span class="number">1</span>)</span><br><span class="line">    test_scores_std = np.std(test_scores, axis=<span class="number">1</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> plot:</span><br><span class="line">        plt.figure()</span><br><span class="line">        plt.title(title)</span><br><span class="line">        <span class="keyword">if</span> ylim <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            plt.ylim(*ylim)</span><br><span class="line">        plt.xlabel(<span class="string">u"训练样本数"</span>)</span><br><span class="line">        plt.ylabel(<span class="string">u"得分"</span>)</span><br><span class="line">        plt.gca().invert_yaxis()</span><br><span class="line">        plt.grid()</span><br><span class="line">    </span><br><span class="line">        plt.fill_between(train_sizes, train_scores_mean - train_scores_std, train_scores_mean + train_scores_std, </span><br><span class="line">                         alpha=<span class="number">0.1</span>, color=<span class="string">"b"</span>)</span><br><span class="line">        plt.fill_between(train_sizes, test_scores_mean - test_scores_std, test_scores_mean + test_scores_std, </span><br><span class="line">                         alpha=<span class="number">0.1</span>, color=<span class="string">"r"</span>)</span><br><span class="line">        plt.plot(train_sizes, train_scores_mean, <span class="string">'o-'</span>, color=<span class="string">"b"</span>, label=<span class="string">u"训练集上得分"</span>)</span><br><span class="line">        plt.plot(train_sizes, test_scores_mean, <span class="string">'o-'</span>, color=<span class="string">"r"</span>, label=<span class="string">u"交叉验证集上得分"</span>)</span><br><span class="line">    </span><br><span class="line">        plt.legend(loc=<span class="string">"best"</span>)</span><br><span class="line">        </span><br><span class="line">        plt.draw()</span><br><span class="line">        plt.gca().invert_yaxis()</span><br><span class="line">        plt.show()</span><br><span class="line">    </span><br><span class="line">    midpoint = ((train_scores_mean[<span class="number">-1</span>] + train_scores_std[<span class="number">-1</span>]) + (test_scores_mean[<span class="number">-1</span>] - test_scores_std[<span class="number">-1</span>])) / <span class="number">2</span></span><br><span class="line">    diff = (train_scores_mean[<span class="number">-1</span>] + train_scores_std[<span class="number">-1</span>]) - (test_scores_mean[<span class="number">-1</span>] - test_scores_std[<span class="number">-1</span>])</span><br><span class="line">    <span class="keyword">return</span> midpoint, diff</span><br><span class="line"></span><br><span class="line">plot_learning_curve(clf, <span class="string">u"学习曲线"</span>, X, y)</span><br></pre></td></tr></table></figure>
 
 
-<img src="/2020/08/06/titanic_logistic_prac/output_44_0.png" class="" title="png">
+<img src="/titanic_logistic_prac/output_44_0.png" class="" title="png">
 
 
 
@@ -2097,10 +2098,10 @@ Name: Cabin, Length: 147, dtype: int64</code></pre><p>因为没有规律，并�
 
 
 <p>可以发现结果总体上是优于之前的预测的，只是不太稳定</p>
-<img src="/2020/08/06/titanic_logistic_prac/1596729100632.png" class="" width="1596729100632">
+<img src="/titanic_logistic_prac/1596729100632.png" class="" width="1596729100632">
 
 <p>最后，仍然是别人总结的思路流程图</p>
-<img src="/2020/08/06/titanic_logistic_prac/100f3a39031e73bd0a8.jpg" class="" title="用机器学习解决问题的过程">
+<img src="/titanic_logistic_prac/100f3a39031e73bd0a8.jpg" class="" title="用机器学习解决问题的过程">
     </div>
 
     
@@ -2201,7 +2202,7 @@ Name: Cabin, Length: 147, dtype: int64</code></pre><p>因为没有规律，并�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -2261,19 +2262,19 @@ Name: Cabin, Length: 147, dtype: int64</code></pre><p>因为没有规律，并�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">92k</span>
+    <span title="Symbols count total">94k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:24</span>
+    <span title="Reading time total">1:25</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
@@ -2307,6 +2308,9 @@ Name: Cabin, Length: 147, dtype: int64</code></pre><p>因为没有规律，并�
   
   <script color='0.0.0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -2320,11 +2324,70 @@ Name: Cabin, Length: 147, dtype: int64</code></pre><p>因为没有规律，并�
 
 <script src="/js/next-boot.js"></script>
 
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
 
 
 
   
-  <script>
+  <script data-pjax>
     (function(){
       var canonicalURL, curProtocol;
       //Get the <link> tag
@@ -2368,6 +2431,7 @@ Name: Cabin, Length: 147, dtype: int64</code></pre><p>因为没有规律，并�
 
 
 
+    <div id="pjax">
   
 
   
@@ -2401,5 +2465,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 });
 </script>
 
+    </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
