@@ -210,7 +210,8 @@
 <h5 id="3-sitemap"><a href="#3-sitemap" class="headerlink" title="3.sitemap"></a>3.sitemap</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
 
 <p>hexo g之后就能看到public中生成了对应的sitemap文件，也可以通过url进行访问了。然后按照百度的格式，将baidusitemap提交即可。</p>
-]]></content>
+<h1 id="google"><a href="#google" class="headerlink" title="google"></a>google</h1><h3 id="1-验证-1"><a href="#1-验证-1" class="headerlink" title="1.验证"></a>1.验证</h3><p>google的验证和百度的验证过程一样</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3>]]></content>
       <categories>
         <category>hexo</category>
       </categories>
