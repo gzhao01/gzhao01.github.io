@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta name="baidu-site-verification" content="AMXRSnG920">
+  <meta name="baidu-site-verification" content="AMXRSnG920" />
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -30,8 +30,9 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gzhao01.top/2020/08/09/hexo-next-SEO%E8%AE%BE%E7%BD%AE/1596919828051.png">
 <meta property="og:image" content="https://www.gzhao01.top/2020/08/09/hexo-next-SEO%E8%AE%BE%E7%BD%AE/1596920200169.png">
+<meta property="og:image" content="https://www.gzhao01.top/2020/08/09/hexo-next-SEO%E8%AE%BE%E7%BD%AE/3.png">
 <meta property="article:published_time" content="2020-08-08T20:46:16.000Z">
-<meta property="article:modified_time" content="2020-08-08T20:56:41.110Z">
+<meta property="article:modified_time" content="2020-08-08T21:09:56.906Z">
 <meta property="article:author" content="gzhao01">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="seo">
@@ -223,7 +224,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-09 04:46:16 / Modified: 04:56:41" itemprop="dateCreated datePublished" datetime="2020-08-09T04:46:16+08:00">2020-08-09</time>
+              <time title="Created: 2020-08-09 04:46:16 / Modified: 05:09:56" itemprop="dateCreated datePublished" datetime="2020-08-09T04:46:16+08:00">2020-08-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,7 +263,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>315</span>
+              <span>614</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -297,8 +298,16 @@
 <h5 id="HTML验证："><a href="#HTML验证：" class="headerlink" title="HTML验证："></a>HTML验证：</h5><p>在<strong>next的config文件里</strong>查找如下记录</p>
 <img src="/2020/08/09/hexo-next-SEO%E8%AE%BE%E7%BD%AE/1596920200169.png" class="" width="1596920200169">
 
-<p>将百度的提供的编码添加进去，重新生成和提交。</p>
+<p>将百度的提供的编码添加进去，<strong>clean之后</strong>重新生成和提交，头文件中就会出现需要的标签。</p>
+<p>具体的设置可以看source/layout/partial/head下面的head.swig中的<code>if theme.baidu_site_verification</code></p>
+<img src="/2020/08/09/hexo-next-SEO%E8%AE%BE%E7%BD%AE/3.png" class="" title="img">
 
+<h3 id="2-推送"><a href="#2-推送" class="headerlink" title="2.推送"></a>2.推送</h3><p>百度的推送方法有三种api推送、sitemap推送、手动推送。因为github屏蔽了百度的爬虫，所以这里需要借助api推送。</p>
+<p>在那之前可以打开next的baidu自动推送功能</p>
+<h5 id="1-next推送功能"><a href="#1-next推送功能" class="headerlink" title="1.next推送功能"></a>1.next推送功能</h5><p>在next的config文件下，搜索baidu_push，改为true。然后generate一下，就会在layout/third…中看到baidu_push.swig</p>
+<hr>
+<h5 id="2-api推送"><a href="#2-api推送" class="headerlink" title="2.api推送"></a>2.api推送</h5><hr>
+<h5 id="3-sitemap"><a href="#3-sitemap" class="headerlink" title="3.sitemap"></a>3.sitemap</h5>
     </div>
 
     
@@ -380,7 +389,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#百度SEO"><span class="nav-number">1.</span> <span class="nav-text">百度SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.验证</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CNAME验证："><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">CNAME验证：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML验证："><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">HTML验证：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#百度SEO"><span class="nav-number">1.</span> <span class="nav-text">百度SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-验证"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.验证</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CNAME验证："><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">CNAME验证：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML验证："><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">HTML验证：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-推送"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.推送</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-next推送功能"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">1.next推送功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-api推送"><span class="nav-number">1.0.2.0.2.</span> <span class="nav-text">2.api推送</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-sitemap"><span class="nav-number">1.0.2.0.3.</span> <span class="nav-text">3.sitemap</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
