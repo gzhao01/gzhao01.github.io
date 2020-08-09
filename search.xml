@@ -376,23 +376,35 @@ if (fileDialog-&gt;exec()) {
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>echartsTest</title>
     <url>/echartsTest/</url>
     <content><![CDATA[<p>测试一下echarts情况</p>
 <a id="more"></a>
 
-<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>Elegant in code, simple in core</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
-
-<div id="echarts5183" style="width: 85%;height: 400px;margin: 0 auto"></div>
-<script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+<div id="echarts7167" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts5183'));
+        var myChart = echarts.init(document.getElementById('echarts7167'));
         // 指定图表的配置项和数据
         var option = {
 ​    tooltip : {
@@ -457,26 +469,13 @@ if (fileDialog-&gt;exec()) {
 };
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
-</script>]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
+</script>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
 ]]></content>
   </entry>
   <entry>
@@ -736,7 +735,13 @@ if (fileDialog-&gt;exec()) {
 <p>可以在config中修改配置</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">recommended_posts:</span><br><span class="line">  server: https:&#x2F;&#x2F;api.truelaurel.com #后端推荐服务器地址</span><br><span class="line">  timeoutInMillis: 10000 #服务时长，超过此时长，则使用离线推荐模式</span><br><span class="line">  internalLinks: 3 #内部文章数量</span><br><span class="line">  externalLinks: 1 #外部文章数量</span><br><span class="line">  fixedNumber: false</span><br><span class="line">  autoDisplay: true #自动在文章底部显示推荐文章</span><br><span class="line">  excludePattern: []</span><br><span class="line">  titleHtml: &lt;h1&gt;推荐文章&lt;span style&#x3D;&quot;font-size:0.45em; color:gray&quot;&gt;（由&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;huiwang&#x2F;hexo-recommended-posts&quot;&gt;hexo文章推荐插件&lt;&#x2F;a&gt;驱动）&lt;&#x2F;span&gt;&lt;&#x2F;h1&gt; #自定义标题</span><br></pre></td></tr></table></figure>
 
-<h3 id="7-echarts"><a href="#7-echarts" class="headerlink" title="7.echarts"></a>7.echarts</h3><h1 id="3-有用的资料"><a href="#3-有用的资料" class="headerlink" title="3.有用的资料"></a>3.有用的资料</h1><p><a href="https://blog.csdn.net/sunshine940326/article/details/70936988/" target="_blank" rel="noopener">https://blog.csdn.net/sunshine940326/article/details/70936988/</a></p>
+<h3 id="7-echarts"><a href="#7-echarts" class="headerlink" title="7.echarts"></a>7.echarts</h3><p>改了好久但还是失败了</p>
+<p><a href="http://fuxuemingzhu.cn/2017/08/10/echarts-hexo/" target="_blank" rel="noopener">http://fuxuemingzhu.cn/2017/08/10/echarts-hexo/</a></p>
+<p><a href="https://blog.csdn.net/qq_41426117/article/details/105416911" target="_blank" rel="noopener">https://blog.csdn.net/qq_41426117/article/details/105416911</a></p>
+<p><a href="https://codertang.com/2019/02/21/hexo-drawing-echarts/" target="_blank" rel="noopener">https://codertang.com/2019/02/21/hexo-drawing-echarts/</a></p>
+<p><a href="https://houmin.cc/posts/d823886b/" target="_blank" rel="noopener">https://houmin.cc/posts/d823886b/</a></p>
+<p><a href="https://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="noopener">https://kchen.cc/2016/11/05/echarts-in-hexo/</a></p>
+<h1 id="3-有用的资料"><a href="#3-有用的资料" class="headerlink" title="3.有用的资料"></a>3.有用的资料</h1><p><a href="https://blog.csdn.net/sunshine940326/article/details/70936988/" target="_blank" rel="noopener">https://blog.csdn.net/sunshine940326/article/details/70936988/</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -910,6 +915,35 @@ if (fileDialog-&gt;exec()) {
       </tags>
   </entry>
   <entry>
+    <title>合并两个有序链表</title>
+    <url>/leetcode21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[
+
+<a id="more"></a>
+
+<p>本题使用递归处理，具体流程可以参考：</p>
+<p><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/yi-kan-jiu-hui-yi-xie-jiu-fei-xiang-jie-di-gui-by-/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/yi-kan-jiu-hui-yi-xie-jiu-fei-xiang-jie-di-gui-by-/</a></p>
+<p><strong>时间复杂度：</strong>$O(m+n)$</p>
+<blockquote>
+<p>给出一个递归算法，其时间复杂度 ${\mathcal{O}(T)}$ 通常是递归调用的数量（记作 ${R}$） 和计算的时间复杂度的乘积（表示为 ${\mathcal{O}(s)})$的乘积：${\mathcal{O}(T) = R * \mathcal{O}(s)}O(T)=R∗O(s)$</p>
+</blockquote>
+<p>设n，m为两个链表的长度。本题的递归调用数量，最坏情况下为$O(m+n)$，每次计算需要耗费$O(1)$的时间。所以空间复杂度为$O(m+n)$</p>
+<p><strong>空间复杂度：</strong>$O(m+n)$</p>
+<p>在递归结束前，已经调用了$O(m+n)$次该函数，所以也调用了那么多的栈帧。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!l1)&#123;</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!l2)&#123;</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(l1-&gt;val&lt;l2-&gt;val)&#123;</span><br><span class="line">            l1-&gt;next = mergeTwoLists(l1-&gt;next,l2);</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            l2-&gt;next = mergeTwoLists(l1,l2-&gt;next);</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>acm</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>acm</tag>
+        <tag>leetcode</tag>
+        <tag>recursion</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>leetcode100：相同的树</title>
     <url>/leetcode100%EF%BC%9A%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/</url>
     <content><![CDATA[<img src="/leetcode100%EF%BC%9A%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/1596830840744.png" class="" width="1596830840744">
@@ -950,35 +984,6 @@ if (fileDialog-&gt;exec()) {
         <tag>leetcode</tag>
         <tag>dfs</tag>
         <tag>bfs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>合并两个有序链表</title>
-    <url>/leetcode21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</url>
-    <content><![CDATA[
-
-<a id="more"></a>
-
-<p>本题使用递归处理，具体流程可以参考：</p>
-<p><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/yi-kan-jiu-hui-yi-xie-jiu-fei-xiang-jie-di-gui-by-/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/yi-kan-jiu-hui-yi-xie-jiu-fei-xiang-jie-di-gui-by-/</a></p>
-<p><strong>时间复杂度：</strong>$O(m+n)$</p>
-<blockquote>
-<p>给出一个递归算法，其时间复杂度 ${\mathcal{O}(T)}$ 通常是递归调用的数量（记作 ${R}$） 和计算的时间复杂度的乘积（表示为 ${\mathcal{O}(s)})$的乘积：${\mathcal{O}(T) = R * \mathcal{O}(s)}O(T)=R∗O(s)$</p>
-</blockquote>
-<p>设n，m为两个链表的长度。本题的递归调用数量，最坏情况下为$O(m+n)$，每次计算需要耗费$O(1)$的时间。所以空间复杂度为$O(m+n)$</p>
-<p><strong>空间复杂度：</strong>$O(m+n)$</p>
-<p>在递归结束前，已经调用了$O(m+n)$次该函数，所以也调用了那么多的栈帧。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!l1)&#123;</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!l2)&#123;</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(l1-&gt;val&lt;l2-&gt;val)&#123;</span><br><span class="line">            l1-&gt;next = mergeTwoLists(l1-&gt;next,l2);</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            l2-&gt;next = mergeTwoLists(l1,l2-&gt;next);</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>acm</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-        <tag>acm</tag>
-        <tag>leetcode</tag>
-        <tag>recursion</tag>
       </tags>
   </entry>
   <entry>
@@ -1127,29 +1132,6 @@ if (fileDialog-&gt;exec()) {
       </tags>
   </entry>
   <entry>
-    <title>leetcode7：整数翻转</title>
-    <url>/leetcode7%EF%BC%9A%E6%95%B4%E6%95%B0%E7%BF%BB%E8%BD%AC/</url>
-    <content><![CDATA[<img src="/leetcode7%EF%BC%9A%E6%95%B4%E6%95%B0%E7%BF%BB%E8%BD%AC/1596699696045.png" class="" width="1596699696045">
-
-<a id="more"></a>
-
-<img src="/leetcode7%EF%BC%9A%E6%95%B4%E6%95%B0%E7%BF%BB%E8%BD%AC/1596699677897.png" class="" width="1596699677897">
-
-<h1 id="1-手算"><a href="#1-手算" class="headerlink" title="1.手算"></a>1.手算</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rev=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x)&#123;</span><br><span class="line">            <span class="keyword">int</span> pop = x%<span class="number">10</span>;</span><br><span class="line">            x=x/<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(rev&gt;INT_MAX/<span class="number">10</span>||(rev==INT_MAX/<span class="number">10</span>&amp;&amp;pop&gt;<span class="number">7</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(rev&lt;INT_MIN/<span class="number">10</span>||(rev==INT_MIN/<span class="number">10</span>&amp;&amp;pop&lt;<span class="number">-8</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            rev = rev*<span class="number">10</span>+pop;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-代码算"><a href="#2-代码算" class="headerlink" title="2.代码算"></a>2.代码算</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rev = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x != <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> pop = x % <span class="number">10</span>;</span><br><span class="line">            x = x / <span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(rev &gt; Integer.MAX_VALUE / <span class="number">10</span> || (rev == Integer.MAX_VALUE / <span class="number">10</span> &amp;&amp; pop &gt; Integer.MAX_VALUE % <span class="number">10</span>))&#123;</span><br><span class="line">                rev = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(rev &lt; Integer.MIN_VALUE / <span class="number">10</span> || (rev == Integer.MIN_VALUE / <span class="number">10</span> &amp;&amp; x &lt; Integer.MIN_VALUE % <span class="number">10</span>))&#123;</span><br><span class="line">                rev = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            rev = rev * <span class="number">10</span> + pop;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>acm</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-        <tag>acm</tag>
-        <tag>leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>leetcode76：最小覆盖子串</title>
     <url>/leetcode76%EF%BC%9A%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/</url>
     <content><![CDATA[<img src="/leetcode76%EF%BC%9A%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/1596540796924.png" class="" width="1596540796924">
@@ -1183,6 +1165,29 @@ if (fileDialog-&gt;exec()) {
         <tag>acm</tag>
         <tag>leetcode</tag>
         <tag>sliding window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode7：整数翻转</title>
+    <url>/leetcode7%EF%BC%9A%E6%95%B4%E6%95%B0%E7%BF%BB%E8%BD%AC/</url>
+    <content><![CDATA[<img src="/leetcode7%EF%BC%9A%E6%95%B4%E6%95%B0%E7%BF%BB%E8%BD%AC/1596699696045.png" class="" width="1596699696045">
+
+<a id="more"></a>
+
+<img src="/leetcode7%EF%BC%9A%E6%95%B4%E6%95%B0%E7%BF%BB%E8%BD%AC/1596699677897.png" class="" width="1596699677897">
+
+<h1 id="1-手算"><a href="#1-手算" class="headerlink" title="1.手算"></a>1.手算</h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rev=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x)&#123;</span><br><span class="line">            <span class="keyword">int</span> pop = x%<span class="number">10</span>;</span><br><span class="line">            x=x/<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(rev&gt;INT_MAX/<span class="number">10</span>||(rev==INT_MAX/<span class="number">10</span>&amp;&amp;pop&gt;<span class="number">7</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(rev&lt;INT_MIN/<span class="number">10</span>||(rev==INT_MIN/<span class="number">10</span>&amp;&amp;pop&lt;<span class="number">-8</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            rev = rev*<span class="number">10</span>+pop;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-代码算"><a href="#2-代码算" class="headerlink" title="2.代码算"></a>2.代码算</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rev = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x != <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> pop = x % <span class="number">10</span>;</span><br><span class="line">            x = x / <span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(rev &gt; Integer.MAX_VALUE / <span class="number">10</span> || (rev == Integer.MAX_VALUE / <span class="number">10</span> &amp;&amp; pop &gt; Integer.MAX_VALUE % <span class="number">10</span>))&#123;</span><br><span class="line">                rev = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(rev &lt; Integer.MIN_VALUE / <span class="number">10</span> || (rev == Integer.MIN_VALUE / <span class="number">10</span> &amp;&amp; x &lt; Integer.MIN_VALUE % <span class="number">10</span>))&#123;</span><br><span class="line">                rev = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            rev = rev * <span class="number">10</span> + pop;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>acm</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>acm</tag>
+        <tag>leetcode</tag>
       </tags>
   </entry>
   <entry>
@@ -1650,7 +1655,7 @@ import torchvision</code></pre></li>
       </tags>
   </entry>
   <entry>
-    <title>biliBara</title>
+    <title>bilibili弹幕爬取</title>
     <url>/biliBara/</url>
     <content><![CDATA[<p>flask+vue的b站弹幕爬虫统计数据</p>
 <img src="/biliBara/1590339415849.png" class="" width="1590339415849">
