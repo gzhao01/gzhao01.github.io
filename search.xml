@@ -166,9 +166,9 @@
         <category>biliBara</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>python</tag>
         <tag>flask</tag>
+        <tag>vue</tag>
         <tag>spider</tag>
       </tags>
   </entry>
@@ -602,11 +602,11 @@
     <content><![CDATA[<p>测试一下echarts情况</p>
 <a id="more"></a>
 
-<div id="echarts8397" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts7062" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts8397'));
+        var myChart = echarts.init(document.getElementById('echarts7062'));
         // 指定图表的配置项和数据
         var option = {
 ​    tooltip : {
