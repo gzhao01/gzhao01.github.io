@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gzhao01.top/leetcode110%EF%BC%9A%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/1597762741527.png">
 <meta property="article:published_time" content="2020-08-18T14:56:58.000Z">
-<meta property="article:modified_time" content="2020-08-18T14:59:05.369Z">
+<meta property="article:modified_time" content="2020-08-18T18:34:02.477Z">
 <meta property="article:author" content="gzhao01">
 <meta property="article:tag" content="c++">
 <meta property="article:tag" content="acm">
@@ -221,10 +221,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-08-18 22:56:58 / Modified: 22:59:05" itemprop="dateCreated datePublished" datetime="2020-08-18T22:56:58+08:00">2020-08-18</time>
+              <time title="Created: 2020-08-18 22:56:58" itemprop="dateCreated datePublished" datetime="2020-08-18T22:56:58+08:00">2020-08-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-19 02:34:02" itemprop="dateModified" datetime="2020-08-19T02:34:02+08:00">2020-08-19</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -262,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2</span>
+              <span>831</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -285,7 +291,11 @@
 
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="1-自顶向下"><a href="#1-自顶向下" class="headerlink" title="1.自顶向下"></a>1.自顶向下</h1><p>就是前序遍历。套上模板：root、left、right。但此处的判断需要得到两遍子树的深度，也就需要再写一个函数用来计算深度。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">height</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>+<span class="built_in">max</span>(<span class="built_in">height</span>(root-&gt;left),<span class="built_in">height</span>(root-&gt;right));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isBalanced</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//特殊情况</span></span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">//root处，操作写在这，这里的操作就是判断该节点是否平衡</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">abs</span>(<span class="built_in">height</span>(root-&gt;left)-<span class="built_in">height</span>(root-&gt;right))&gt;<span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">//左节点，右节点</span></span><br><span class="line">        <span class="keyword">return</span> isBalanced(root-&gt;left)&amp;&amp;isBalanced(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-自底向下"><a href="#2-自底向下" class="headerlink" title="2.自底向下"></a>2.自底向下</h1><p>对height使用后续遍历，直接在height里判断是否平衡，如果不平衡返回-1</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">height</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="built_in">height</span>(root-&gt;left);</span><br><span class="line">        <span class="keyword">int</span> right = <span class="built_in">height</span>(root-&gt;right);</span><br><span class="line">        <span class="keyword">if</span>(left==<span class="number">-1</span>||right==<span class="number">-1</span>||<span class="built_in">abs</span>(left-right)&gt;<span class="number">1</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>+<span class="built_in">max</span>(left,right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isBalanced</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">height</span>(root)!=<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -374,6 +384,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-自顶向下"><span class="nav-number">1.</span> <span class="nav-text">1.自顶向下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-自底向下"><span class="nav-number">2.</span> <span class="nav-text">2.自底向下</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -449,12 +460,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">112k</span>
+    <span title="Symbols count total">113k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:42</span>
+    <span title="Reading time total">1:43</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
@@ -654,4 +665,14 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 
     </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+
+	<!-- ͼƬ�ֲ�js�ļ�cdn -->
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js"></script>
+
+	<!-- �Զ����js�ļ� -->
+	<script>
+	$("body").backstretch([
+	  ], { duration: 60000, fade: 1500 });
+	</script>
+
 </html>

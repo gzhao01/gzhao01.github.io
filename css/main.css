@@ -1271,7 +1271,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff418f;
+  background: #fe7de0;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2819,7 +2819,7 @@ ul.breadcrumb li + li:last-child {
   background: url("../images/scrollbar_arrow.png") no-repeat -30px -18px;
 }
 .sidebar-inner {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
   border-radius: 10px;
 }
 .site-author-image {
@@ -2863,4 +2863,18 @@ ul.breadcrumb li + li:last-child {
 }
 .icon-bilibili-line:before {
   content: "\e75d";
+}
+/*͸����*/
+.content .post-block {
+  background: rgba(255,255,255,0.97);
+}
+.sidebar {
+  background: rgba(255,255,255,0.2);
+}
+.sidebar-inner {
+  background: rgba(255,255,255,0.9);
+}
+/* ����ͼƬ͸���� */
+.backstretch {
+  opacity: 0.75;
 }

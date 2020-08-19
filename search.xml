@@ -273,7 +273,11 @@
 
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="1-自顶向下"><a href="#1-自顶向下" class="headerlink" title="1.自顶向下"></a>1.自顶向下</h1><p>就是前序遍历。套上模板：root、left、right。但此处的判断需要得到两遍子树的深度，也就需要再写一个函数用来计算深度。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">height</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>+<span class="built_in">max</span>(<span class="built_in">height</span>(root-&gt;left),<span class="built_in">height</span>(root-&gt;right));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isBalanced</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//特殊情况</span></span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">//root处，操作写在这，这里的操作就是判断该节点是否平衡</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">abs</span>(<span class="built_in">height</span>(root-&gt;left)-<span class="built_in">height</span>(root-&gt;right))&gt;<span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">//左节点，右节点</span></span><br><span class="line">        <span class="keyword">return</span> isBalanced(root-&gt;left)&amp;&amp;isBalanced(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-自底向下"><a href="#2-自底向下" class="headerlink" title="2.自底向下"></a>2.自底向下</h1><p>对height使用后续遍历，直接在height里判断是否平衡，如果不平衡返回-1</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">height</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="built_in">height</span>(root-&gt;left);</span><br><span class="line">        <span class="keyword">int</span> right = <span class="built_in">height</span>(root-&gt;right);</span><br><span class="line">        <span class="keyword">if</span>(left==<span class="number">-1</span>||right==<span class="number">-1</span>||<span class="built_in">abs</span>(left-right)&gt;<span class="number">1</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>+<span class="built_in">max</span>(left,right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isBalanced</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">height</span>(root)!=<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -598,11 +602,11 @@
     <content><![CDATA[<p>测试一下echarts情况</p>
 <a id="more"></a>
 
-<div id="echarts2081" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts8397" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts2081'));
+        var myChart = echarts.init(document.getElementById('echarts8397'));
         // 指定图表的配置项和数据
         var option = {
 ​    tooltip : {
@@ -932,7 +936,9 @@
 
 <h1 id="3-树"><a href="#3-树" class="headerlink" title="3.树"></a>3.树</h1><p><a href="https://www.cnblogs.com/bigsai/p/11393609.html" target="_blank" rel="noopener">https://www.cnblogs.com/bigsai/p/11393609.html</a></p>
 <p><a href="https://leetcode-cn.com/problems/same-tree/solution/xie-shu-suan-fa-de-tao-lu-kuang-jia-by-wei-lai-bu-/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/same-tree/solution/xie-shu-suan-fa-de-tao-lu-kuang-jia-by-wei-lai-bu-/</a></p>
-<h3 id="1-几种遍历"><a href="#1-几种遍历" class="headerlink" title="1.几种遍历"></a>1.几种遍历</h3><p>前序遍历</p>
+<h3 id="1-几种遍历"><a href="#1-几种遍历" class="headerlink" title="1.几种遍历"></a>1.几种遍历</h3><img src="/leetcode%E6%80%BB%E7%BB%93/1597775405882.png" class="" width="1597775405882">
+
+<p>前序遍历</p>
 <img src="/leetcode%E6%80%BB%E7%BB%93/20190820000853382.png" class="" title="在这里插入图片描述">
 
 <p>中序遍历</p>
