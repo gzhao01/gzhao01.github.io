@@ -243,6 +243,28 @@
       </tags>
   </entry>
   <entry>
+    <title>python对excel合并</title>
+    <url>/python%E5%AF%B9excel%E5%90%88%E5%B9%B6/</url>
+    <content><![CDATA[<p>使用python将同一目录下的excel表格进行合并</p>
+<a id="more"></a>
+
+<h1 id="1-code"><a href="#1-code" class="headerlink" title="1.code"></a>1.code</h1><p>python代码如下，要注意的是excel文件有xsls和xsl两种格式</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> xlrd,xlwt</span><br><span class="line"><span class="comment">#============set style====================</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_stlye</span><span class="params">(name,height,bold=False)</span>:</span></span><br><span class="line">  <span class="comment">#初始化样式</span></span><br><span class="line">  style = xlwt.XFStyle()</span><br><span class="line">  <span class="comment">#创建字体</span></span><br><span class="line">  font = xlwt.Font()</span><br><span class="line">  font.bold = bold</span><br><span class="line">  font.colour_index = <span class="number">4</span></span><br><span class="line">  font.height = height</span><br><span class="line">  font.name =name</span><br><span class="line">  style.font = font</span><br><span class="line">  <span class="keyword">return</span> style</span><br><span class="line"><span class="comment">#==============get file list===============</span></span><br><span class="line">filelist=[]</span><br><span class="line"><span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(<span class="string">"."</span>, topdown=<span class="literal">False</span>):</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> files:</span><br><span class="line">        str=os.path.join(root, name)</span><br><span class="line">        <span class="keyword">if</span> str.split(<span class="string">'.'</span>)[<span class="number">-1</span>]==<span class="string">'xlsx'</span>||str.split(<span class="string">'.'</span>)[<span class="number">-1</span>]==<span class="string">'xls'</span>:</span><br><span class="line">            filelist.append(str)</span><br><span class="line">print(<span class="string">'get files suc'</span>)</span><br><span class="line"><span class="comment"># #===========read excel=================</span></span><br><span class="line"><span class="comment"># wb = xlrd.open_workbook('.\\daily use\\填空.xlsx')</span></span><br><span class="line"><span class="comment"># #sheet1索引从0开始，得到sheet1表的句柄</span></span><br><span class="line"><span class="comment"># sheet1 = wb.sheet_by_index(0)</span></span><br><span class="line"><span class="comment"># rowNum = sheet1.nrows</span></span><br><span class="line"><span class="comment"># colNum = sheet1.ncols</span></span><br><span class="line"><span class="comment"># print('read  suc')</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#=================write=====================================</span></span><br><span class="line">output = xlwt.Workbook()</span><br><span class="line"><span class="comment">#add a new sheet</span></span><br><span class="line">output_sheet1 = output.add_sheet(<span class="string">u'sheet1'</span>,cell_overwrite_ok=<span class="literal">True</span>)</span><br><span class="line">output_row = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> filelist:</span><br><span class="line">  print(file)</span><br><span class="line">  wb = xlrd.open_workbook(file)</span><br><span class="line">  sheet1 = wb.sheet_by_index(<span class="number">0</span>)</span><br><span class="line">  rowNum = sheet1.nrows</span><br><span class="line">  colNum = sheet1.ncols</span><br><span class="line">  <span class="keyword">for</span> row <span class="keyword">in</span> range(rowNum):</span><br><span class="line">    value = sheet1.cell(row,<span class="number">0</span>).value</span><br><span class="line">    output_sheet1.write(output_row,<span class="number">0</span>,value,set_stlye(<span class="string">"Time New Roman"</span>,<span class="number">220</span>,<span class="literal">True</span>))</span><br><span class="line">    output_row+=<span class="number">1</span>;</span><br><span class="line"><span class="comment"># save the file</span></span><br><span class="line">output.save(<span class="string">'output.xls'</span>)</span><br><span class="line">print(<span class="string">'output suc'</span>)</span><br><span class="line">print(<span class="string">'finish'</span>)</span><br><span class="line">input()</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-build"><a href="#2-build" class="headerlink" title="2.build"></a>2.build</h1><p>之后使用pyinstaller进行build</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyinstaller -F -i icon.ico excelcombine.py</span><br></pre></td></tr></table></figure>
+
+<p>其中的icon.ico就是最后生成的可执行程序的图标，需要使用ico格式的图片，这里就直接上网上搜一个转化网站就好了，生成完成之后，将.exe文件移动一下就能够看到图标生效了。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>leetcode226：翻转二叉树</title>
     <url>/leetcode226%EF%BC%9A%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
     <content><![CDATA[<img src="/leetcode226%EF%BC%9A%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/1597769391520.png" class="" width="1597769391520">
@@ -602,11 +624,11 @@
     <content><![CDATA[<p>测试一下echarts情况</p>
 <a id="more"></a>
 
-<div id="echarts7062" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts3003" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts7062'));
+        var myChart = echarts.init(document.getElementById('echarts3003'));
         // 指定图表的配置项和数据
         var option = {
 ​    tooltip : {
