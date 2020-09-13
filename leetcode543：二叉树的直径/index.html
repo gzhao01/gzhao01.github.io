@@ -28,15 +28,16 @@
 <meta property="og:url" content="https://www.gzhao01.top/leetcode543%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/index.html">
 <meta property="og:site_name" content="gzhao01&#39;s blog">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.gzhao01.top/leetcode543%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/1599548012298.png">
 <meta property="article:published_time" content="2020-09-08T06:46:22.000Z">
-<meta property="article:modified_time" content="2020-09-08T06:46:22.037Z">
+<meta property="article:modified_time" content="2020-09-08T12:01:39.038Z">
 <meta property="article:author" content="gzhao01">
-<meta property="article:tag" content="machine learning">
-<meta property="article:tag" content=" vue">
-<meta property="article:tag" content=" python">
-<meta property="article:tag" content=" leetcode">
-<meta property="article:tag" content=" c++">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="acm">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="tree">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.gzhao01.top/leetcode543%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/1599548012298.png">
 
 <link rel="canonical" href="https://www.gzhao01.top/leetcode543%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/">
 
@@ -126,17 +127,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">51</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">53</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">15</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">17</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">69</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">76</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -220,8 +221,18 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-09-08 14:46:22" itemprop="dateCreated datePublished" datetime="2020-09-08T14:46:22+08:00">2020-09-08</time>
+              <time title="Created: 2020-09-08 14:46:22 / Modified: 20:01:39" itemprop="dateCreated datePublished" datetime="2020-09-08T14:46:22+08:00">2020-09-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/acm/" itemprop="url" rel="index"><span itemprop="name">acm</span></a>
+                </span>
             </span>
 
           
@@ -251,7 +262,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>0</span>
+              <span>641</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -270,7 +281,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <a id="more"></a>
+        <img src="/leetcode543%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/1599548012298.png" class="" width="1599548012298">
+
+<a id="more"></a>
+
+<p>这一题本质就是求节点的深度，只要在求深度的过程中将左右节点的深度相加起来就能构成一个直径，那么最大直径也就是在这一系列数中求出最大值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> max_diameter = INT_MIN;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">depth</span><span class="params">(TreeNode* node)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!node) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> left = depth(node-&gt;left);</span><br><span class="line">        <span class="keyword">int</span> right = depth(node-&gt;right);</span><br><span class="line">        <span class="keyword">int</span> <span class="built_in">max</span> = left&gt;right?left:right;</span><br><span class="line">        <span class="keyword">int</span> sum = left+right;</span><br><span class="line">        <span class="keyword">if</span>(max_diameter&lt;sum) max_diameter = sum;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>+<span class="built_in">max</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">diameterOfBinaryTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        depth(root);</span><br><span class="line">        <span class="keyword">return</span> max_diameter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -278,6 +296,12 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/c/" rel="tag"># c++</a>
+              <a href="/tags/acm/" rel="tag"># acm</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/tree/" rel="tag"># tree</a>
+          </div>
 
         
 
@@ -288,7 +312,10 @@
     <a href="/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%80%BB%E7%BB%93/" rel="prev" title="leetcode滑动窗口总结">
       <i class="fa fa-chevron-left"></i> leetcode滑动窗口总结
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/leetcode337%EF%BC%9A%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D3/" rel="next" title="leetcode337：打家劫舍3">
+      leetcode337：打家劫舍3 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -363,20 +390,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-count">53</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -423,12 +450,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">125k</span>
+    <span title="Symbols count total">136k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:54</span>
+    <span title="Reading time total">2:04</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
