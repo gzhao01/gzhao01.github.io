@@ -31,8 +31,22 @@
 <meta property="og:description" content="GAMES101-lecture04">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614017709080.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614216091756.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614216118974.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614216359230.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614216503083.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614935757322.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614935934053.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614936233659.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614937844589.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614937874900.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614938486315.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614938582557.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614939095955.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614939604962.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture04/1614940865084.png">
 <meta property="article:published_time" content="2021-02-22T17:40:55.000Z">
-<meta property="article:modified_time" content="2021-02-22T18:15:26.424Z">
+<meta property="article:modified_time" content="2021-03-05T10:41:25.237Z">
 <meta property="article:author" content="gzhao01">
 <meta property="article:tag" content="computer graphics">
 <meta name="twitter:card" content="summary">
@@ -126,17 +140,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">55</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">19</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">85</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">86</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -220,10 +234,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-02-23 01:40:55 / Modified: 02:15:26" itemprop="dateCreated datePublished" datetime="2021-02-23T01:40:55+08:00">2021-02-23</time>
+              <time title="Created: 2021-02-23 01:40:55" itemprop="dateCreated datePublished" datetime="2021-02-23T01:40:55+08:00">2021-02-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-05 18:41:25" itemprop="dateModified" datetime="2021-03-05T18:41:25+08:00">2021-03-05</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -261,7 +281,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>87</span>
+              <span>767</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -287,7 +307,55 @@
 <p>比如旋转矩阵就是一个正交矩阵。</p>
 <img src="/GAMES101-lecture04/1614017709080.png" class="" width="1614017709080">
 
-<h1 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h1><h1 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h1>
+<h1 id="1-3D-transformation"><a href="#1-3D-transformation" class="headerlink" title="1.3D transformation"></a>1.3D transformation</h1><img src="/GAMES101-lecture04/1614216091756.png" class="" width="1614216091756">
+
+<p>绕x轴，x不变，其他的同理</p>
+<img src="/GAMES101-lecture04/1614216118974.png" class="" width="1614216118974">
+
+<p>循环对称，x叉乘z与y轴方向相反，所以绕y旋转的矩阵以其他的不同</p>
+<h3 id="复杂旋转"><a href="#复杂旋转" class="headerlink" title="复杂旋转"></a>复杂旋转</h3><img src="/GAMES101-lecture04/1614216359230.png" class="" width="1614216359230">
+
+<p>rotation by any angle</p>
+<p>n默认过原点</p>
+<img src="/GAMES101-lecture04/1614216503083.png" class="" width="1614216503083">
+
+<p>如果要绕任意轴旋转，则可以先把物体移动到原点，然后旋转再移动回去原点。</p>
+<h3 id="四元数"><a href="#四元数" class="headerlink" title="四元数"></a>四元数</h3><h1 id="2-View-Camera-Transformation"><a href="#2-View-Camera-Transformation" class="headerlink" title="2. View/Camera Transformation"></a>2. View/Camera Transformation</h1><h3 id="MVP-transformation"><a href="#MVP-transformation" class="headerlink" title="MVP transformation"></a>MVP transformation</h3><p>将三维空间投射到二维空间上</p>
+<img src="/GAMES101-lecture04/1614935757322.png" class="" width="1614935757322">
+
+
+
+<h3 id="define-the-camera"><a href="#define-the-camera" class="headerlink" title="define the camera"></a>define the camera</h3><img src="/GAMES101-lecture04/1614935934053.png" class="" width="1614935934053">
+
+<p>therefore we regular that <strong>the camera is always looking at -Z，and its up is Y</strong></p>
+<img src="/GAMES101-lecture04/1614936233659.png" class="" width="1614936233659">
+
+<h3 id="modelview-transformation"><a href="#modelview-transformation" class="headerlink" title="modelview transformation"></a>modelview transformation</h3><p>steps to transform camera from current status to normal status</p>
+<img src="/GAMES101-lecture04/1614937844589.png" class="" width="1614937844589">
+
+<p>先使用平移矩阵，将相机移动到原点。然后在相机进行旋转。</p>
+<p>这里考虑从标准坐标旋转到相机的坐标的矩阵，三个坐标分别使用了投影变化。</p>
+<p>然后再考虑他的逆矩阵，同时<strong>旋转矩阵是正交矩阵，他的逆矩阵是他的转置</strong></p>
+<p>最后也就得到了<strong>视图变化</strong>的矩阵</p>
+<img src="/GAMES101-lecture04/1614937874900.png" class="" width="1614937874900">
+
+
+
+<h1 id="3-Projection-Transformation"><a href="#3-Projection-Transformation" class="headerlink" title="3. Projection Transformation"></a>3. Projection Transformation</h1><h3 id="perspective-projection-amp-amp-orthographic-projection"><a href="#perspective-projection-amp-amp-orthographic-projection" class="headerlink" title="perspective projection &amp;&amp; orthographic projection"></a>perspective projection &amp;&amp; orthographic projection</h3><img src="/GAMES101-lecture04/1614938486315.png" class="" width="1614938486315">
+
+<h3 id="orthographic-projection"><a href="#orthographic-projection" class="headerlink" title="orthographic projection"></a>orthographic projection</h3><img src="/GAMES101-lecture04/1614938582557.png" class="" width="1614938582557">
+
+<h3 id="canonical-cube"><a href="#canonical-cube" class="headerlink" title="canonical  cube"></a>canonical  cube</h3><p>下图是将方块转化成<strong>canonical（标准）cube</strong></p>
+<p>右边的矩阵将方块移动到原点，左边的矩阵将方块的边长转变为2（因为要变成范围是【-1,1】的立方体）</p>
+<img src="/GAMES101-lecture04/1614939095955.png" class="" width="1614939095955">
+
+
+
+<h1 id="perspective-projection"><a href="#perspective-projection" class="headerlink" title="perspective projection"></a>perspective projection</h1><h3 id="homogeneous-property"><a href="#homogeneous-property" class="headerlink" title="homogeneous property"></a>homogeneous property</h3><img src="/GAMES101-lecture04/1614939604962.png" class="" width="1614939604962">
+
+<h3 id="how-to-do"><a href="#how-to-do" class="headerlink" title="how to do"></a>how to do</h3><img src="/GAMES101-lecture04/1614940865084.png" class="" width="1614940865084">
+
+
     </div>
 
     
@@ -371,7 +439,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">1.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2"><span class="nav-number">2.</span> <span class="nav-text">2.</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-3D-transformation"><span class="nav-number">1.</span> <span class="nav-text">1.3D transformation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂旋转"><span class="nav-number">1.0.1.</span> <span class="nav-text">复杂旋转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四元数"><span class="nav-number">1.0.2.</span> <span class="nav-text">四元数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-View-Camera-Transformation"><span class="nav-number">2.</span> <span class="nav-text">2. View&#x2F;Camera Transformation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP-transformation"><span class="nav-number">2.0.1.</span> <span class="nav-text">MVP transformation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#define-the-camera"><span class="nav-number">2.0.2.</span> <span class="nav-text">define the camera</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#modelview-transformation"><span class="nav-number">2.0.3.</span> <span class="nav-text">modelview transformation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Projection-Transformation"><span class="nav-number">3.</span> <span class="nav-text">3. Projection Transformation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#perspective-projection-amp-amp-orthographic-projection"><span class="nav-number">3.0.1.</span> <span class="nav-text">perspective projection &amp;&amp; orthographic projection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orthographic-projection"><span class="nav-number">3.0.2.</span> <span class="nav-text">orthographic projection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#canonical-cube"><span class="nav-number">3.0.3.</span> <span class="nav-text">canonical  cube</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#perspective-projection"><span class="nav-number">4.</span> <span class="nav-text">perspective projection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#homogeneous-property"><span class="nav-number">4.0.1.</span> <span class="nav-text">homogeneous property</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-to-do"><span class="nav-number">4.0.2.</span> <span class="nav-text">how to do</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -387,20 +455,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-count">86</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -447,12 +515,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">148k</span>
+    <span title="Symbols count total">150k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:15</span>
+    <span title="Reading time total">2:17</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
