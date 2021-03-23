@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="kvAOpjBj3WdYhThIJzQsebX7Q4YpH1ORgg1rVtA-cqk"/>
+  <meta name="baidu-site-verification" content="AMXRSnG920"/>
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.gzhao01.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="GAMES101-lecture09">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GAMES101-lecture09">
+<meta property="og:url" content="https://www.gzhao01.top/GAMES101-lecture09/index.html">
+<meta property="og:site_name" content="gzhao01&#39;s blog">
+<meta property="og:description" content="GAMES101-lecture09">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1615945473863.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1615945803511.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1615987514281.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1615987594923.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1615988136628.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616154589572.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616156331778.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616156543926.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616156616469.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616157099011.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616160862037.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616160967236.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616161026226.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616161247833.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616161278735.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616161377697.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616161405367.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616161504413.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616161514680.png">
+<meta property="og:image" content="https://www.gzhao01.top/GAMES101-lecture09/1616161597057.png">
+<meta property="article:published_time" content="2021-03-15T10:25:40.000Z">
+<meta property="article:modified_time" content="2021-03-19T13:46:39.360Z">
+<meta property="article:author" content="gzhao01">
+<meta property="article:tag" content="computer graphics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.gzhao01.top/GAMES101-lecture09/1615945473863.png">
+
+<link rel="canonical" href="https://www.gzhao01.top/GAMES101-lecture09/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>GAMES101-lecture09 | gzhao01's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">gzhao01's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">59</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">20</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">92</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/gzhao01" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://www.gzhao01.top/GAMES101-lecture09/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/smileMan.jpg">
+      <meta itemprop="name" content="gzhao01">
+      <meta itemprop="description" content="interested in coding, gaming and animation">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gzhao01's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          GAMES101-lecture09
+        </h1>
+
+        <div class="post-meta">
+
+	  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-15 18:25:40" itemprop="dateCreated datePublished" datetime="2021-03-15T18:25:40+08:00">2021-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-19 21:46:39" itemprop="dateModified" datetime="2021-03-19T21:46:39+08:00">2021-03-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/computer-graphics/" itemprop="url" rel="index"><span itemprop="name">computer graphics</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/GAMES101-lecture09/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/GAMES101-lecture09/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>796</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>GAMES101-lecture09</p>
+<a id="more"></a>
+
+<h1 id="Barycentric-coordinates（重心坐标）"><a href="#Barycentric-coordinates（重心坐标）" class="headerlink" title="Barycentric coordinates（重心坐标）"></a>Barycentric coordinates（重心坐标）</h1><p>三角形内任意一点，都可以被A,B,C表示。但条件是系数都是非负数。</p>
+<img src="/GAMES101-lecture09/1615945473863.png" class="" width="1615945473863">
+
+<p>重心坐标如何求取？可以使用面积比来求得各自的系数，从而得到。</p>
+<img src="/GAMES101-lecture09/1615945803511.png" class="" width="1615945803511">
+
+<p>重心坐标计算公式</p>
+<img src="/GAMES101-lecture09/1615987514281.png" class="" width="1615987514281">
+
+
+
+<h1 id="Using-Barycentric-Coordinates"><a href="#Using-Barycentric-Coordinates" class="headerlink" title="Using Barycentric Coordinates"></a>Using Barycentric Coordinates</h1><p>三个顶点有属性V_A,V_B,V_C,使用重心坐标进行插值</p>
+<img src="/GAMES101-lecture09/1615987594923.png" class="" width="1615987594923">
+
+<p>三维空间中，要在三维空间中进行插值操作，而不是投影变换后，在二维空间中进行插值操作。因为投影变化，会让重心坐标改变。</p>
+<h1 id="diffuse-color-texture-mapping"><a href="#diffuse-color-texture-mapping" class="headerlink" title="diffuse color texture mapping"></a>diffuse color texture mapping</h1><img src="/GAMES101-lecture09/1615988136628.png" class="" width="1615988136628">
+
+
+
+<h1 id="Texture-magnification（texture-too-small）"><a href="#Texture-magnification（texture-too-small）" class="headerlink" title="Texture magnification（texture too small）"></a>Texture magnification（texture too small）</h1><p>texel是纹理上的像素。</p>
+<p>pixel是图像上的像素。</p>
+<img src="/GAMES101-lecture09/1616154589572.png" class="" width="1616154589572">
+
+<h3 id="nearest"><a href="#nearest" class="headerlink" title="nearest"></a>nearest</h3><p>nearst时候，因为纹理过小，每个像素就会取最近的纹理像素上的内容，也就导致会变成方格状的图。</p>
+<h3 id="bilinear"><a href="#bilinear" class="headerlink" title="bilinear"></a>bilinear</h3><p>双线性插值，并且红点的颜色和距离其最近的点更相似。</p>
+<img src="/GAMES101-lecture09/1616156331778.png" class="" width="1616156331778">
+
+<h3 id="bicubic"><a href="#bicubic" class="headerlink" title="bicubic"></a>bicubic</h3><p>取周围十六个点</p>
+<h1 id="Texture-magnification（texture-too-large）"><a href="#Texture-magnification（texture-too-large）" class="headerlink" title="Texture magnification（texture too large）"></a>Texture magnification（texture too large）</h1><h3 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h3><img src="/GAMES101-lecture09/1616156543926.png" class="" width="1616156543926">
+
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>近距离一个图像像素覆盖的纹理像素少，远距离一个图像像素覆盖的纹理像素多 。</p>
+<p>即一个图像像素内的纹理像素变化多，也就是有高频信号。</p>
+<img src="/GAMES101-lecture09/1616156616469.png" class="" width="1616156616469">
+
+<h1 id="mipmap"><a href="#mipmap" class="headerlink" title="mipmap"></a>mipmap</h1><p>生成不同的分辨率的图，而且存储量为原来的4/3，即只多出来1/3</p>
+<img src="/GAMES101-lecture09/1616157099011.png" class="" width="1616157099011">
+
+<h3 id="compute-mipmap-level"><a href="#compute-mipmap-level" class="headerlink" title="compute mipmap level"></a>compute mipmap level</h3><img src="/GAMES101-lecture09/1616160862037.png" class="" width="1616160862037">
+
+<img src="/GAMES101-lecture09/1616160967236.png" class="" width="1616160967236">
+
+<img src="/GAMES101-lecture09/1616161026226.png" class="" width="1616161026226">
+
+<p>求出第几层后，该方形区域会变成一个像素的大小，就能够得到mipmap的层数</p>
+<h3 id="visualization"><a href="#visualization" class="headerlink" title="visualization"></a>visualization</h3><img src="/GAMES101-lecture09/1616161247833.png" class="" width="1616161247833">
+
+<h3 id="trilinear-interpolation"><a href="#trilinear-interpolation" class="headerlink" title="trilinear interpolation"></a>trilinear interpolation</h3><p>三线性插值，在层与层之间进行插值，即可得到非整数层的mipmap了</p>
+<img src="/GAMES101-lecture09/1616161278735.png" class="" width="1616161278735">
+
+<img src="/GAMES101-lecture09/1616161377697.png" class="" width="1616161377697">
+
+
+
+<h1 id="anisotropic-filtering各向异性过滤"><a href="#anisotropic-filtering各向异性过滤" class="headerlink" title="anisotropic filtering各向异性过滤"></a>anisotropic filtering各向异性过滤</h1><p>即各个方向不同</p>
+<h3 id="mipmap-problem"><a href="#mipmap-problem" class="headerlink" title="mipmap problem"></a>mipmap problem</h3><img src="/GAMES101-lecture09/1616161405367.png" class="" width="1616161405367">
+
+<h3 id="anisotropic-filtering"><a href="#anisotropic-filtering" class="headerlink" title="anisotropic filtering"></a>anisotropic filtering</h3><p>可以用来解决矩形区域的问题</p>
+<img src="/GAMES101-lecture09/1616161504413.png" class="" width="1616161504413">
+
+<p>但是斜方向的长条形区域则不行</p>
+<img src="/GAMES101-lecture09/1616161514680.png" class="" width="1616161514680">
+
+
+
+<h1 id="EWA-filtering"><a href="#EWA-filtering" class="headerlink" title="EWA filtering"></a>EWA filtering</h1><img src="/GAMES101-lecture09/1616161597057.png" class="" width="1616161597057">
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/computer-graphics/" rel="tag"># computer graphics</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/GAMES101-lecture08/" rel="prev" title="GAMES101-lecture08">
+      <i class="fa fa-chevron-left"></i> GAMES101-lecture08
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/GAMES202-lecture02/" rel="next" title="GAMES202-lecture02">
+      GAMES202-lecture02 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Barycentric-coordinates（重心坐标）"><span class="nav-number">1.</span> <span class="nav-text">Barycentric coordinates（重心坐标）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Using-Barycentric-Coordinates"><span class="nav-number">2.</span> <span class="nav-text">Using Barycentric Coordinates</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#diffuse-color-texture-mapping"><span class="nav-number">3.</span> <span class="nav-text">diffuse color texture mapping</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Texture-magnification（texture-too-small）"><span class="nav-number">4.</span> <span class="nav-text">Texture magnification（texture too small）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nearest"><span class="nav-number">4.0.1.</span> <span class="nav-text">nearest</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bilinear"><span class="nav-number">4.0.2.</span> <span class="nav-text">bilinear</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bicubic"><span class="nav-number">4.0.3.</span> <span class="nav-text">bicubic</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Texture-magnification（texture-too-large）"><span class="nav-number">5.</span> <span class="nav-text">Texture magnification（texture too large）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#problem"><span class="nav-number">5.0.1.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">5.0.2.</span> <span class="nav-text">分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mipmap"><span class="nav-number">6.</span> <span class="nav-text">mipmap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#compute-mipmap-level"><span class="nav-number">6.0.1.</span> <span class="nav-text">compute mipmap level</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#visualization"><span class="nav-number">6.0.2.</span> <span class="nav-text">visualization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trilinear-interpolation"><span class="nav-number">6.0.3.</span> <span class="nav-text">trilinear interpolation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#anisotropic-filtering各向异性过滤"><span class="nav-number">7.</span> <span class="nav-text">anisotropic filtering各向异性过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mipmap-problem"><span class="nav-number">7.0.1.</span> <span class="nav-text">mipmap problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#anisotropic-filtering"><span class="nav-number">7.0.2.</span> <span class="nav-text">anisotropic filtering</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EWA-filtering"><span class="nav-number">8.</span> <span class="nav-text">EWA filtering</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="gzhao01"
+      src="/images/smileMan.jpg">
+  <p class="site-author-name" itemprop="name">gzhao01</p>
+  <div class="site-description" itemprop="description">interested in coding, gaming and animation</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/gzhao01" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;gzhao01" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/6692208" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;6692208" rel="noopener" target="_blank"><i class="custom icon-bilibili-line fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.jianshu.com/u/2909840cd97e" title="JianShu → https:&#x2F;&#x2F;www.jianshu.com&#x2F;u&#x2F;2909840cd97e" rel="noopener" target="_blank"><i class="custom icon-jianshu fa-fw"></i>JianShu</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gzhao01</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">153k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">2:19</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='0.0.0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+  <script data-pjax>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'ATOAcHehJMfiS6nVHoBbCisu-gzGzoHsz',
+      appKey     : 'K0ve0Ydk6XMKpm49l7T5BPD5',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+
+	<!-- ͼƬ�ֲ�js�ļ�cdn -->
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js"></script>
+
+	<!-- �Զ����js�ļ� -->
+	<script>
+	$("body").backstretch([
+	  "/images/background_1.jpg",
+	  "/images/background_2.jpg"
+	  ], { duration: 60000, fade: 1500 });
+	</script>
+
+</html>
