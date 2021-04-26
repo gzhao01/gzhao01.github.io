@@ -243,9 +243,216 @@
       </tags>
   </entry>
   <entry>
+    <title>GAMES101-lecture13</title>
+    <url>/GAMES101-lecture13/</url>
+    <content><![CDATA[<p>GAMES101 lecture13 Ray Tracing1  Whitted-style ray tracing</p>
+<a id="more"></a>
+
+<h1 id="why-ray-tracing"><a href="#why-ray-tracing" class="headerlink" title="why ray tracing"></a>why ray tracing</h1><img src="/GAMES101-lecture13/1619427149908.png" class="" width="1619427149908">
+
+<h1 id="hypothesis"><a href="#hypothesis" class="headerlink" title="hypothesis"></a>hypothesis</h1><img src="/GAMES101-lecture13/1619429019716.png" class="" width="1619429019716">
+
+]]></content>
+      <categories>
+        <category>computer graphics</category>
+      </categories>
+      <tags>
+        <tag>computer graphics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GAMES101-Lecture12_Geometry3</title>
+    <url>/GAMES101-Lecture12-Geometry3/</url>
+    <content><![CDATA[<p>GAMES101- LECTURE12</p>
+<a id="more"></a>
+
+<h1 id="subdivision"><a href="#subdivision" class="headerlink" title="subdivision"></a>subdivision</h1><h3 id="loop-subdivision"><a href="#loop-subdivision" class="headerlink" title="loop subdivision"></a>loop subdivision</h3><p>不是循环细分！！！</p>
+<p>只是family name叫loop</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619235625598.png" class="" width="1619235625598">
+
+
+
+<h5 id="new-vertex"><a href="#new-vertex" class="headerlink" title="new vertex"></a>new vertex</h5><img src="/GAMES101-Lecture12-Geometry3/1619235955339.png" class="" width="1619235955339">
+
+<img src="/GAMES101-Lecture12-Geometry3/1619236086015.png" class="" width="1619236086015">
+
+<h5 id="old-vertex"><a href="#old-vertex" class="headerlink" title="old vertex"></a>old vertex</h5><p>u即权重</p>
+<p>当degree越大，origin vertex自身的重要程度就越低，系数也就会越小</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619236380014.png" class="" width="1619236380014">
+
+
+
+<h3 id="catmull-clark-subdivision"><a href="#catmull-clark-subdivision" class="headerlink" title="catmull-clark subdivision"></a>catmull-clark subdivision</h3><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p>non-quad face</p>
+<p>extraordinary vertex</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619238176387.png" class="" width="1619238176387">
+
+<img src="/GAMES101-Lecture12-Geometry3/1619238192779.png" class="" width="1619238192779">
+
+<h5 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h5><img src="/GAMES101-Lecture12-Geometry3/1619238105739.png" class="" width="1619238105739">
+
+<p>catmull可以对非三角形的平面进行细分</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619240212498.png" class="" width="1619240212498">
+
+<h1 id="mesh-simplification"><a href="#mesh-simplification" class="headerlink" title="mesh simplification"></a>mesh simplification</h1><h3 id="goal"><a href="#goal" class="headerlink" title="goal"></a>goal</h3><img src="/GAMES101-Lecture12-Geometry3/1619416091753.png" class="" width="1619416091753">
+
+<h3 id="collapsing-the-edge（边坍缩）"><a href="#collapsing-the-edge（边坍缩）" class="headerlink" title="collapsing the edge（边坍缩）"></a>collapsing the edge（边坍缩）</h3><img src="/GAMES101-Lecture12-Geometry3/1619416290822.png" class="" width="1619416290822">
+
+
+
+<h3 id="quadric-error-metrics"><a href="#quadric-error-metrics" class="headerlink" title="quadric error metrics"></a>quadric error metrics</h3><img src="/GAMES101-Lecture12-Geometry3/1619416438330.png" class="" width="1619416438330">
+
+<h3 id="quadric-error-of-edge-collapse"><a href="#quadric-error-of-edge-collapse" class="headerlink" title="quadric error of edge collapse"></a>quadric error of edge collapse</h3><p>选择坍缩后，quadric error最小的边</p>
+<p>可以使用优先队列来 维护最小的值对应的边</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619416677788.png" class="" width="1619416677788">
+
+
+
+<h3 id="simplification-via-quadric-error"><a href="#simplification-via-quadric-error" class="headerlink" title="simplification via quadric error"></a>simplification via quadric error</h3><h1 id="shadow-mapping"><a href="#shadow-mapping" class="headerlink" title="shadow mapping"></a>shadow mapping</h1><p>非阴影处的点既可以被光源看达到，也可以被相机看到</p>
+<p>阴影处的点只能被相机看到，不能被光源看到</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619417244177.png" class="" width="1619417244177">
+
+<h3 id="pass1：render-from-light"><a href="#pass1：render-from-light" class="headerlink" title="pass1：render from  light"></a>pass1：render from  light</h3><p>从光源看向场景，记录下深度图</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619417510479.png" class="" width="1619417510479">
+
+<h3 id="Pass2：-project-to-light"><a href="#Pass2：-project-to-light" class="headerlink" title="Pass2： project to light"></a>Pass2： project to light</h3><p>再从相机处渲染整个场景的深度图，然后从每个点投影回光源处得到另一个深度图。</p>
+<p>和原来光源处的深度图进行比较，如果相同就不是阴影区域</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619422509594.png" class="" width="1619422509594">
+
+<p>和原来光源处的深度图进行比较，如果不同，此处就是阴影区域</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619422320348.png" class="" width="1619422320348">
+
+<h3 id="visualizing-shadow-map"><a href="#visualizing-shadow-map" class="headerlink" title="visualizing shadow map"></a>visualizing shadow map</h3><img src="/GAMES101-Lecture12-Geometry3/1619423495257.png" class="" width="1619423495257">
+
+<p>深度图</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619423506262.png" class="" width="1619423506262">
+
+<p>因为浮点数的相等判断问题，会出现噪点</p>
+<img src="/GAMES101-Lecture12-Geometry3/1619423936199.png" class="" width="1619423936199">
+
+<h3 id="problems"><a href="#problems" class="headerlink" title="problems"></a>problems</h3><img src="/GAMES101-Lecture12-Geometry3/1619424642873.png" class="" width="1619424642873">
+
+<h1 id="soft-shadow-amp-hard-shadow"><a href="#soft-shadow-amp-hard-shadow" class="headerlink" title="soft shadow &amp; hard shadow"></a>soft shadow &amp; hard shadow</h1><img src="/GAMES101-Lecture12-Geometry3/1619424795630.png" class="" width="1619424795630">
+
+]]></content>
+      <categories>
+        <category>computer graphics</category>
+      </categories>
+      <tags>
+        <tag>computer graphics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lecture12_Geometry3</title>
+    <url>/Lecture12-Geometry3/</url>
+    <content><![CDATA[<a id="more"></a>]]></content>
+  </entry>
+  <entry>
+    <title>GAMES101-lecture11</title>
+    <url>/GAMES101-lecture11/</url>
+    <content><![CDATA[<p>GAMES101 lecture11 geometry2</p>
+<a id="more"></a>
+
+<h1 id="representation-of-model"><a href="#representation-of-model" class="headerlink" title="representation of model"></a>representation of model</h1><h3 id="Point-Cloud-Explicit"><a href="#Point-Cloud-Explicit" class="headerlink" title="Point Cloud(Explicit)"></a>Point Cloud(Explicit)</h3><img src="/GAMES101-lecture11/1619018446791.png" class="" width="1619018446791">
+
+<h3 id="Polygon-Mesh-Explicit"><a href="#Polygon-Mesh-Explicit" class="headerlink" title="Polygon Mesh(Explicit)"></a>Polygon Mesh(Explicit)</h3><img src="/GAMES101-lecture11/1619018513626.png" class="" width="1619018513626">
+
+<h3 id="Wavefront-Object-File-obj"><a href="#Wavefront-Object-File-obj" class="headerlink" title="Wavefront Object File(.obj)"></a>Wavefront Object File(.obj)</h3><img src="/GAMES101-lecture11/1619018856418.png" class="" width="1619018856418">
+
+<h1 id="Curves"><a href="#Curves" class="headerlink" title="Curves"></a>Curves</h1><h3 id="Bezier-Curves-贝塞尔曲线"><a href="#Bezier-Curves-贝塞尔曲线" class="headerlink" title="Bezier Curves(贝塞尔曲线)"></a>Bezier Curves(贝塞尔曲线)</h3><p>曲线只要经过起止点。</p>
+<p>控制点不一定要经过曲线</p>
+<img src="/GAMES101-lecture11/1619019370515.png" class="" width="1619019370515">
+
+<h3 id="Evaluating-Bezier-Curves（De-Casteljau-Algorithm）"><a href="#Evaluating-Bezier-Curves（De-Casteljau-Algorithm）" class="headerlink" title="Evaluating Bezier Curves（De Casteljau Algorithm）"></a>Evaluating Bezier Curves（De Casteljau Algorithm）</h3><p>quadratic Bezier 二次贝塞尔曲线</p>
+<img src="/GAMES101-lecture11/1619218405365.png" class="" width="1619218405365">
+
+<img src="/GAMES101-lecture11/1619219434547.png" class="" width="1619219434547">
+
+<img src="/GAMES101-lecture11/1619219450234.png" class="" width="1619219450234">
+
+<img src="/GAMES101-lecture11/1619219466767.png" class="" width="1619219466767">
+
+
+
+<h3 id="Evaluating-Bezier-curves-Algebraic-Formula"><a href="#Evaluating-Bezier-curves-Algebraic-Formula" class="headerlink" title="Evaluating Bezier curves Algebraic Formula"></a>Evaluating Bezier curves Algebraic Formula</h3><img src="/GAMES101-lecture11/1619219657592.png" class="" width="1619219657592">
+
+<img src="/GAMES101-lecture11/1619219726540.png" class="" width="1619219726540">
+
+<p>Bernstein polynomial（伯恩茨坦多项式）</p>
+<img src="/GAMES101-lecture11/1619221543670.png" class="" width="1619221543670">
+
+<p>可以扩充到更高纬的空间</p>
+<img src="/GAMES101-lecture11/1619221746903.png" class="" width="1619221746903">
+
+<h3 id="properties-of-bezier-curves"><a href="#properties-of-bezier-curves" class="headerlink" title="properties of bezier curves"></a>properties of bezier curves</h3><img src="/GAMES101-lecture11/1619225143564.png" class="" width="1619225143564">
+
+<p>1、贝塞尔曲线必定经过起止点</p>
+<p>2、在有四个点定义的贝塞尔曲线中性质，切线方向</p>
+<p>3、仿射变换前求贝塞尔曲线，和变换后求贝塞尔曲线得到的曲线相同</p>
+<p>4、凸包性质，所有点得到的贝塞尔曲线一定在凸包中</p>
+<img src="/GAMES101-lecture11/1619225468284.png" class="" width="1619225468284">
+
+
+
+<h3 id="piecewise-bezier-curves"><a href="#piecewise-bezier-curves" class="headerlink" title="piecewise bezier curves"></a>piecewise bezier curves</h3><p>分段贝塞尔曲线</p>
+<img src="/GAMES101-lecture11/1619225732487.png" class="" width="1619225732487">
+
+<p>两端的分段贝塞尔曲线</p>
+<img src="/GAMES101-lecture11/1619226903353.png" class="" width="1619226903353">
+
+<p>C0连续：只要首位相连即可</p>
+<img src="/GAMES101-lecture11/1619227017802.png" class="" width="1619227017802">
+
+<p>C1连续：即两处的切线方向一样，根据性质也就是两端长度相同</p>
+<img src="/GAMES101-lecture11/1619226994144.png" class="" width="1619226994144">
+
+<h1 id="other-types-of-spline"><a href="#other-types-of-spline" class="headerlink" title="other types of spline"></a>other types of spline</h1><p>样条：用一系列的点控制的曲线</p>
+<img src="/GAMES101-lecture11/1619227195107.png" class="" width="1619227195107">
+
+<h3 id="B-spline"><a href="#B-spline" class="headerlink" title="B-spline"></a>B-spline</h3><img src="/GAMES101-lecture11/1619227713287.png" class="" width="1619227713287">
+
+<h1 id="surface"><a href="#surface" class="headerlink" title="surface"></a>surface</h1><h3 id="bezier-srface"><a href="#bezier-srface" class="headerlink" title="bezier srface"></a>bezier srface</h3><img src="/GAMES101-lecture11/1619228035459.png" class="" width="1619228035459">
+
+<h3 id="bicubic-bezier-furface-patch"><a href="#bicubic-bezier-furface-patch" class="headerlink" title="bicubic bezier furface patch"></a>bicubic bezier furface patch</h3><img src="/GAMES101-lecture11/1619228080803.png" class="" width="1619228080803">
+
+<h3 id="evaluating-bezier-surface"><a href="#evaluating-bezier-surface" class="headerlink" title="evaluating bezier surface"></a>evaluating bezier surface</h3><img src="/GAMES101-lecture11/1619228359397.png" class="" width="1619228359397">
+
+<h3 id="mesh-operation"><a href="#mesh-operation" class="headerlink" title="mesh operation"></a>mesh operation</h3><img src="/GAMES101-lecture11/1619228496219.png" class="" width="1619228496219">]]></content>
+      <categories>
+        <category>computer graphics</category>
+      </categories>
+      <tags>
+        <tag>computer graphics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GAMES202-lecture02</title>
     <url>/GAMES202-lecture02/</url>
-    <content><![CDATA[<a id="more"></a>]]></content>
+    <content><![CDATA[<p>racap of basic cg</p>
+<a id="more"></a>
+
+<h1 id="graphics-pipline"><a href="#graphics-pipline" class="headerlink" title="graphics pipline"></a>graphics pipline</h1><img src="/GAMES202-lecture02/1616471672442.png" class="" width="1616471672442">
+
+<h1 id="opengl"><a href="#opengl" class="headerlink" title="opengl"></a>opengl</h1><h3 id="do-what"><a href="#do-what" class="headerlink" title="do what"></a>do what</h3><p>store model in <strong>VBO</strong>（vertex buffer object）</p>
+<p>create/use a <strong>framebuffer</strong></p>
+<p>one rendering <strong>pass</strong> in oepngl</p>
+<img src="/GAMES202-lecture02/1616489958687.png" class="" width="1616489958687">
+
+<h1 id="GLSL-opengl-shading-language"><a href="#GLSL-opengl-shading-language" class="headerlink" title="GLSL(opengl shading language)"></a>GLSL(opengl shading language)</h1><h3 id="history"><a href="#history" class="headerlink" title="history"></a>history</h3><img src="/GAMES202-lecture02/1616490196419.png" class="" width="1616490196419">
+
+<h3 id="vertex-和-fragment"><a href="#vertex-和-fragment" class="headerlink" title="vertex 和 fragment"></a>vertex 和 fragment</h3><p>vertex中定义顶点并进行插值操作</p>
+<p>fragment中进行着色</p>
+<h1 id="rendering-equation"><a href="#rendering-equation" class="headerlink" title="rendering equation"></a>rendering equation</h1><img src="/GAMES202-lecture02/1616495293911.png" class="" width="1616495293911">
+
+<p>in real time rendering</p>
+<img src="/GAMES202-lecture02/1616495417829.png" class="" width="1616495417829">
+
+]]></content>
+      <categories>
+        <category>computer graphics</category>
+      </categories>
+      <tags>
+        <tag>computer graphics</tag>
+      </tags>
   </entry>
   <entry>
     <title>GAMES101-lecture09</title>
