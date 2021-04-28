@@ -243,6 +243,20 @@
       </tags>
   </entry>
   <entry>
+    <title>GAMES101-HOMEWORK</title>
+    <url>/GAMES101-HOMEWORK/</url>
+    <content><![CDATA[<p>GAMES101 homework</p>
+<a id="more"></a>
+
+<h1 id="pa1"><a href="#pa1" class="headerlink" title="pa1"></a>pa1</h1><h1 id="pa2"><a href="#pa2" class="headerlink" title="pa2"></a>pa2</h1>]]></content>
+      <categories>
+        <category>computer graphics</category>
+      </categories>
+      <tags>
+        <tag>computer graphics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GAMES101-lecture13</title>
     <url>/GAMES101-lecture13/</url>
     <content><![CDATA[<p>GAMES101 lecture13 Ray Tracing1  Whitted-style ray tracing</p>
@@ -849,9 +863,9 @@
       </tags>
   </entry>
   <entry>
-    <title>GAMES101-lecture04</title>
+    <title>GAMES101-lecture04 Transformation Cont</title>
     <url>/GAMES101-lecture04/</url>
-    <content><![CDATA[<p>GAMES101-lecture04</p>
+    <content><![CDATA[<p>GAMES101-lecture04 </p>
 <a id="more"></a>
 
 <p>一个矩阵的<strong>逆矩阵</strong>正交矩阵和<strong>转置矩阵</strong>相同，那么这个矩阵就是正交矩阵。正交矩阵可以简化逆矩阵的计算过程。</p>
@@ -906,7 +920,9 @@
 
 <h3 id="how-to-do"><a href="#how-to-do" class="headerlink" title="how to do"></a>how to do</h3><img src="/GAMES101-lecture04/1614940865084.png" class="" width="1614940865084">
 
-<img src="/GAMES101-lecture04/1614959231626.png" class="" width="1614959231626">]]></content>
+<img src="/GAMES101-lecture04/1614959231626.png" class="" width="1614959231626">
+
+<img src="/GAMES101-lecture04/1619450328399.png" class="" width="1619450328399">]]></content>
       <categories>
         <category>computer graphics</category>
       </categories>

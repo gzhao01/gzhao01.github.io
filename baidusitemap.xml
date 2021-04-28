@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.gzhao01.top/GAMES101-HOMEWORK/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gzhao01.top/GAMES101-lecture04/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
     <loc>https://www.gzhao01.top/GAMES101-lecture13/</loc>
     <lastmod>2021-04-26</lastmod>
   </url>
@@ -39,10 +47,6 @@
   <url>
     <loc>https://www.gzhao01.top/GAMES101-lecture06/</loc>
     <lastmod>2021-03-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.gzhao01.top/GAMES101-lecture04/</loc>
-    <lastmod>2021-03-05</lastmod>
   </url>
   <url>
     <loc>https://www.gzhao01.top/unity-bardent-tutorial/</loc>
