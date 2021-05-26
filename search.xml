@@ -243,12 +243,160 @@
       </tags>
   </entry>
   <entry>
+    <title>GAMES101-lecture15_Ray_Tracing3</title>
+    <url>/GAMES101-lecture15-Ray-Tracing3/</url>
+    <content><![CDATA[<p>GAMES101-lecture15_Ray_Tracing3</p>
+<a id="more"></a>
+
+]]></content>
+      <categories>
+        <category>computer graphics</category>
+      </categories>
+      <tags>
+        <tag>computer graphics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>darksouls_tutorial_s1</title>
+    <url>/darksouls-tutorial-s1/</url>
+    <content><![CDATA[<p>dark souls tutorial s1</p>
+<a id="more"></a>
+
+<h1 id="character-movement"><a href="#character-movement" class="headerlink" title="character movement"></a>character movement</h1><p>在黑魂的系统中，右摇杆能控制空间的方向，左摇杆则在这个空间方向中控制角色的方向。</p>
+<img src="/darksouls-tutorial-s1/1621337169088.png" class="" width="1621337169088">
+
+<h3 id="移速和方向控制"><a href="#移速和方向控制" class="headerlink" title="移速和方向控制"></a>移速和方向控制</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;只有接收到input信号后，才能旋转模型，这样子静止时就不会归位</span><br><span class="line">if(pi.Dmag&gt;0.1f)&#123;</span><br><span class="line">    &#x2F;&#x2F;set move animation with movement magnitude</span><br><span class="line">	anim.SetFloat(&quot;forward&quot;,Mathf.Sqrt(pi.Dup*pi.Dup + pi.Dright*pi.Dright));</span><br><span class="line">	&#x2F;&#x2F;set move direction</span><br><span class="line">	model.transform.forward &#x3D; pi.Dup * transform.forward + pi.Dright * 	transform.right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>unity</category>
+      </categories>
+      <tags>
+        <tag>unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>unity_problem_collection</title>
+    <url>/unity-problem-collection/</url>
+    <content><![CDATA[<p>unity problem collection</p>
+<a id="more"></a>
+
+<h1 id="FUNCTION-EXPLATION"><a href="#FUNCTION-EXPLATION" class="headerlink" title="FUNCTION EXPLATION"></a>FUNCTION EXPLATION</h1><h3 id="screenPosition-w"><a href="#screenPosition-w" class="headerlink" title="screenPosition.w"></a>screenPosition.w</h3><h1 id="SOME-SKILLS"><a href="#SOME-SKILLS" class="headerlink" title="SOME SKILLS"></a>SOME SKILLS</h1><h3 id="解决trigger累计输入问题"><a href="#解决trigger累计输入问题" class="headerlink" title="解决trigger累计输入问题"></a>解决trigger累计输入问题</h3><p>在到达的状态机处放置一个脚本，在进入该状态时，将信号清除掉</p>
+<img src="/unity-problem-collection/1621574172027.png" class="" width="1621574172027">
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public string[] clearAtEnter;</span><br><span class="line">public string[] clearAtExit;</span><br><span class="line">&#x2F;&#x2F; OnStateEnter is called when a transition starts and the state machine starts to evaluate this state</span><br><span class="line">override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)</span><br><span class="line">&#123;</span><br><span class="line">    foreach(var signal in clearAtEnter)</span><br><span class="line">    &#123;</span><br><span class="line">        animator.ResetTrigger(signal);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="ERRORS"><a href="#ERRORS" class="headerlink" title="ERRORS"></a>ERRORS</h1><h3 id="scene-color-node-not-working-in-shader-graph"><a href="#scene-color-node-not-working-in-shader-graph" class="headerlink" title="scene color node not working in shader graph"></a>scene color node not working in shader graph</h3><p><a href="https://answers.unity.com/questions/1692270/scene-color-node-not-working-in-shader-graph.html" target="_blank" rel="noopener">https://answers.unity.com/questions/1692270/scene-color-node-not-working-in-shader-graph.html</a></p>
+<img src="/unity-problem-collection/152473-opaquetexture.png" class="" title="alt text">]]></content>
+      <categories>
+        <category>unity</category>
+      </categories>
+      <tags>
+        <tag>unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UnityGraphShaderCollection</title>
+    <url>/UnityGraphShaderCollection/</url>
+    <content><![CDATA[<p>unity的Shader graph和ASE的总结</p>
+<a id="more"></a>
+
+<h3 id="球的移动"><a href="#球的移动" class="headerlink" title="球的移动"></a>球的移动</h3><h5 id="总体"><a href="#总体" class="headerlink" title="总体"></a>总体</h5><p>两个部分：其中一个控制uv贴图的偏移量，另一个做为遮罩贴图（遮罩贴图原地不动）</p>
+<p>这样子就形成一种类似于球转动的效果</p>
+<img src="/UnityGraphShaderCollection/1620575076398.png" class="" width="1620575076398">
+
+<img src="/UnityGraphShaderCollection/%E5%8A%A8%E7%94%BB.gif" class="" title="动画">
+
+<h5 id="uv的（0-0）坐标移动到中心"><a href="#uv的（0-0）坐标移动到中心" class="headerlink" title="uv的（0,0）坐标移动到中心"></a>uv的（0,0）坐标移动到中心</h5><p>unity的uv贴图坐标如下</p>
+<img src="/UnityGraphShaderCollection/ceb890f09205861d75b0726008e1088a.png" class="" title="这里写图片描述">
+
+<p>uv_coordinate = orig_uv_coordinate * scale + offset</p>
+<p>这里scale取2，offset取-1即可</p>
+<img src="/UnityGraphShaderCollection/1620584258199.png" class="" width="1620584258199">
+
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>Shader Graph</tag>
+        <tag>ASE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GAMES101-Lecture14-ray-tracing2</title>
+    <url>/GAMES101-Lecture14-ray-tracing2/</url>
+    <content><![CDATA[<p>GAMES101 lecture14 ray tracing2（accelerating &amp; radiometry）</p>
+<a id="more"></a>
+
+<h1 id="uniform-spatial-partition"><a href="#uniform-spatial-partition" class="headerlink" title="uniform spatial partition"></a>uniform spatial partition</h1><h3 id="preprocess"><a href="#preprocess" class="headerlink" title="preprocess"></a>preprocess</h3><p>预处理不会对实时渲染产生影响</p>
+<img src="/GAMES101-Lecture14-ray-tracing2/1619924387369.png" class="" width="1619924387369">
+
+<h3 id="ray-secne-intersection"><a href="#ray-secne-intersection" class="headerlink" title="ray-secne intersection"></a>ray-secne intersection</h3><p>比如光线向右上方射出</p>
+<p>那么只要找光线目前相交格子的右边一个或者上面一个，来判定是否与光线相交即可。</p>
+<img src="/GAMES101-Lecture14-ray-tracing2/1619924509691.png" class="" width="1619924509691">
+
+<h3 id="grid-resolution"><a href="#grid-resolution" class="headerlink" title="grid resolution"></a>grid resolution</h3><p>划分的格子不能太稀疏，也不能太密集</p>
+<img src="/GAMES101-Lecture14-ray-tracing2/1619925135536.png" class="" width="1619925135536">
+
+<h3 id="work-well-and-fail"><a href="#work-well-and-fail" class="headerlink" title="work well and fail"></a>work well and fail</h3><img src="/GAMES101-Lecture14-ray-tracing2/1619925186270.png" class="" width="1619925186270">
+
+<img src="/GAMES101-Lecture14-ray-tracing2/1619925230040.png" class="" width="1619925230040">
+
+<h1 id="spatial-partition"><a href="#spatial-partition" class="headerlink" title="spatial partition"></a>spatial partition</h1><p>八叉树在二维情况下是四叉树</p>
+<img src="/GAMES101-Lecture14-ray-tracing2/1619926066290.png" class="" width="1619926066290">
+
+<h3 id="kd-tree"><a href="#kd-tree" class="headerlink" title="kd-tree"></a>kd-tree</h3><img src="/GAMES101-Lecture14-ray-tracing2/1619926200501.png" class="" width="1619926200501">
+
+<h3 id="data-structure-of-kd-tree"><a href="#data-structure-of-kd-tree" class="headerlink" title="data-structure of kd-tree"></a>data-structure of kd-tree</h3><p>实际的物体只存在叶子节点上，中间节点不存储实际的物体</p>
+<img src="/GAMES101-Lecture14-ray-tracing2/1619926297133.png" class="" width="1619926297133">
+
+<h3 id="process"><a href="#process" class="headerlink" title="process"></a>process</h3><p>和bounding-box相交的话就接着寻找叶子节点是否相交.</p>
+<p>直到和叶子节点相交时,求光线与该叶子节点内的所有物体是否相交.</p>
+<img src="/GAMES101-Lecture14-ray-tracing2/1619926418586.png" class="" width="1619926418586">
+
+<h3 id="object-partition-amp-bounding-volume-hierarchy-BVH"><a href="#object-partition-amp-bounding-volume-hierarchy-BVH" class="headerlink" title="object partition &amp; bounding volume hierarchy(BVH)"></a>object partition &amp; bounding volume hierarchy(BVH)</h3><p>通过物体划分而不是通过空间进行划分</p>
+<h3 id="bounding-volume-hierarchy-BVH"><a href="#bounding-volume-hierarchy-BVH" class="headerlink" title="bounding volume hierarchy(BVH)"></a>bounding volume hierarchy(BVH)</h3><img src="/GAMES101-Lecture14-ray-tracing2/1619927176540.png" class="" width="1619927176540">
+
+<h1 id="radiometry"><a href="#radiometry" class="headerlink" title="radiometry"></a>radiometry</h1><h3 id="some-terms"><a href="#some-terms" class="headerlink" title="some terms"></a>some terms</h3><img src="/GAMES101-Lecture14-ray-tracing2/1621426247433.png" class="" width="1621426247433">
+
+<h3 id="Radiant-Energy-and-Flux"><a href="#Radiant-Energy-and-Flux" class="headerlink" title="Radiant Energy and Flux"></a>Radiant Energy and Flux</h3><img src="/GAMES101-Lecture14-ray-tracing2/1621431345190.png" class="" width="1621431345190">
+
+<h3 id="light-measurement"><a href="#light-measurement" class="headerlink" title="light measurement"></a>light measurement</h3><img src="/GAMES101-Lecture14-ray-tracing2/1621436518248.png" class="" width="1621436518248">
+
+<h5 id="radiant-intensity"><a href="#radiant-intensity" class="headerlink" title="radiant intensity"></a>radiant intensity</h5><img src="/GAMES101-Lecture14-ray-tracing2/1621436678525.png" class="" width="1621436678525">
+
+<img src="/GAMES101-Lecture14-ray-tracing2/1621437305973.png" class="" width="1621437305973">
+
+<h5 id="立体角"><a href="#立体角" class="headerlink" title="立体角"></a>立体角</h5><img src="/GAMES101-Lecture14-ray-tracing2/1621436886409.png" class="" width="1621436886409">
+
+<img src="/GAMES101-Lecture14-ray-tracing2/1621437197668.png" class="" width="1621437197668">
+
+<img src="/GAMES101-Lecture14-ray-tracing2/1621438060839.png" class="" width="1621438060839">
+
+<img src="/GAMES101-Lecture14-ray-tracing2/1621438068695.png" class="" width="1621438068695">
+
+
+
+]]></content>
+      <categories>
+        <category>computer graphics</category>
+      </categories>
+      <tags>
+        <tag>computer graphics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GAMES101-HOMEWORK</title>
     <url>/GAMES101-HOMEWORK/</url>
     <content><![CDATA[<p>GAMES101 homework</p>
 <a id="more"></a>
 
-<h1 id="pa1"><a href="#pa1" class="headerlink" title="pa1"></a>pa1</h1><h1 id="pa2"><a href="#pa2" class="headerlink" title="pa2"></a>pa2</h1>]]></content>
+<h1 id="pa1"><a href="#pa1" class="headerlink" title="pa1"></a>pa1</h1><h3 id="练习内容"><a href="#练习内容" class="headerlink" title="练习内容"></a>练习内容</h3><p>主要联系的是MVP变化</p>
+<h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><h1 id="pa2"><a href="#pa2" class="headerlink" title="pa2"></a>pa2</h1>]]></content>
       <categories>
         <category>computer graphics</category>
       </categories>
@@ -266,7 +414,55 @@
 
 <h1 id="hypothesis"><a href="#hypothesis" class="headerlink" title="hypothesis"></a>hypothesis</h1><img src="/GAMES101-lecture13/1619429019716.png" class="" width="1619429019716">
 
-]]></content>
+<h1 id="pinhole-camera-model"><a href="#pinhole-camera-model" class="headerlink" title="pinhole camera model"></a>pinhole camera model</h1><img src="/GAMES101-lecture13/1619685383308.png" class="" width="1619685383308">
+
+<h1 id="recursive-ray-tracing（whitted-style）"><a href="#recursive-ray-tracing（whitted-style）" class="headerlink" title="recursive ray tracing（whitted-style）"></a>recursive ray tracing（whitted-style）</h1><img src="/GAMES101-lecture13/1619685542249.png" class="" width="1619685542249">
+
+<img src="/GAMES101-lecture13/1619710592083.png" class="" width="1619710592083">
+
+<h3 id="recursive-ray-tracing-shading"><a href="#recursive-ray-tracing-shading" class="headerlink" title="recursive ray tracing shading"></a>recursive ray tracing shading</h3><img src="/GAMES101-lecture13/1619710711127.png" class="" width="1619710711127">
+
+<h3 id="primary-rary、secondary-ray、shadow-ray"><a href="#primary-rary、secondary-ray、shadow-ray" class="headerlink" title="primary rary、secondary ray、shadow ray"></a>primary rary、secondary ray、shadow ray</h3><img src="/GAMES101-lecture13/1619710951646.png" class="" width="1619710951646">
+
+<h1 id="ray-surface-intersection"><a href="#ray-surface-intersection" class="headerlink" title="ray-surface intersection"></a>ray-surface intersection</h1><h3 id="ray-equation"><a href="#ray-equation" class="headerlink" title="ray equation"></a>ray equation</h3><img src="/GAMES101-lecture13/1619712847719.png" class="" width="1619712847719">
+
+<h3 id="ray-intersection-with-sphere"><a href="#ray-intersection-with-sphere" class="headerlink" title="ray intersection with sphere"></a>ray intersection with sphere</h3><img src="/GAMES101-lecture13/1619713347473.png" class="" width="1619713347473">
+
+<img src="/GAMES101-lecture13/1619713588943.png" class="" width="1619713588943">
+
+<h3 id="ray-intersection-with-implicit-surface"><a href="#ray-intersection-with-implicit-surface" class="headerlink" title="ray intersection with implicit surface"></a>ray intersection with implicit surface</h3><img src="/GAMES101-lecture13/1619714788187.png" class="" width="1619714788187">
+
+<h3 id="ray-surface-with-triangle-mesh"><a href="#ray-surface-with-triangle-mesh" class="headerlink" title="ray surface with triangle mesh"></a>ray surface with triangle mesh</h3><p>在封闭的多边形内的一个点发出一个向外的射线，和多边形的交点只要奇数个</p>
+<img src="/GAMES101-lecture13/1619715209535.png" class="" width="1619715209535">
+
+<h5 id="问题分解"><a href="#问题分解" class="headerlink" title="问题分解"></a>问题分解</h5><p>将光线与三角形的相交问题转化为</p>
+<p>1、光线与平面是否相交 2、交点是否在三角形内</p>
+<p>这两个问题</p>
+<img src="/GAMES101-lecture13/1619769846188.png" class="" width="1619769846188">
+
+<h5 id="平面的定义"><a href="#平面的定义" class="headerlink" title="平面的定义"></a>平面的定义</h5><p>点法式定义</p>
+<p>一个平面是由满足下面条件的p点组成的集合</p>
+<img src="/GAMES101-lecture13/1619773317349.png" class="" width="1619773317349">
+
+<h5 id="ray-intersection-with-plane"><a href="#ray-intersection-with-plane" class="headerlink" title="ray intersection with plane"></a>ray intersection with plane</h5><img src="/GAMES101-lecture13/1619880583228.png" class="" width="1619880583228">
+
+<h3 id="moller-trumbore-algorithm"><a href="#moller-trumbore-algorithm" class="headerlink" title="moller trumbore algorithm"></a>moller trumbore algorithm</h3><p>解除t后，判断1-b1-b2和b1和b2都是非负，那么焦点就在三角形内</p>
+<img src="/GAMES101-lecture13/1619880868552.png" class="" width="1619880868552">
+
+<h3 id="accelerating-ray-surface-intersection"><a href="#accelerating-ray-surface-intersection" class="headerlink" title="accelerating ray-surface intersection"></a>accelerating ray-surface intersection</h3><h5 id="bouding-volumes（包围体积）"><a href="#bouding-volumes（包围体积）" class="headerlink" title="bouding volumes（包围体积）"></a>bouding volumes（包围体积）</h5><img src="/GAMES101-lecture13/1619881404579.png" class="" width="1619881404579">
+
+
+
+<h5 id="ray-intersection-with-box"><a href="#ray-intersection-with-box" class="headerlink" title="ray-intersection with box"></a>ray-intersection with box</h5><p>一个box是由三对平面组成的</p>
+<img src="/GAMES101-lecture13/1619883536332.png" class="" width="1619883536332">
+
+<h5 id="intersection-with-axis-aligned-box"><a href="#intersection-with-axis-aligned-box" class="headerlink" title="intersection with axis-aligned box"></a>intersection with axis-aligned box</h5><img src="/GAMES101-lecture13/1619884276125.png" class="" width="1619884276125">
+
+<img src="/GAMES101-lecture13/1619884502817.png" class="" width="1619884502817">
+
+<img src="/GAMES101-lecture13/1619884675306.png" class="" width="1619884675306">
+
+<h5 id="why-axis-aligned？"><a href="#why-axis-aligned？" class="headerlink" title="why axis aligned？"></a>why axis aligned？</h5><img src="/GAMES101-lecture13/1619884810361.png" class="" width="1619884810361">]]></content>
       <categories>
         <category>computer graphics</category>
       </categories>
