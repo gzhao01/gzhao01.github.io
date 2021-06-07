@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.gzhao01.top/unity-problem-collection/</loc>
-    <lastmod>2021-05-21</lastmod>
+    <loc>https://www.gzhao01.top/geometryGrassShader/</loc>
+    <lastmod>2021-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gzhao01.top/toonWaterShader/</loc>
+    <lastmod>2021-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gzhao01.top/GAMES101-lecture16-Ray-Tracing-4/</loc>
+    <lastmod>2021-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gzhao01.top/virtualbox%E7%B2%98%E8%B4%B4%E6%9D%BF%E5%85%B1%E4%BA%AB%E4%B8%8D%E7%94%9F%E6%95%88/</loc>
+    <lastmod>2021-06-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gzhao01.top/GAMES101-HOMEWORK/</loc>
+    <lastmod>2021-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gzhao01.top/GAMES101-lecture08/</loc>
+    <lastmod>2021-05-30</lastmod>
   </url>
   <url>
     <loc>https://www.gzhao01.top/GAMES101-lecture15-Ray-Tracing3/</loc>
-    <lastmod>2021-05-19</lastmod>
+    <lastmod>2021-05-28</lastmod>
+  </url>
+  <url>
+    <loc>https://www.gzhao01.top/unity-problem-collection/</loc>
+    <lastmod>2021-05-21</lastmod>
   </url>
   <url>
     <loc>https://www.gzhao01.top/GAMES101-Lecture14-ray-tracing2/</loc>
@@ -23,10 +47,6 @@
   <url>
     <loc>https://www.gzhao01.top/GAMES101-lecture13/</loc>
     <lastmod>2021-05-01</lastmod>
-  </url>
-  <url>
-    <loc>https://www.gzhao01.top/GAMES101-HOMEWORK/</loc>
-    <lastmod>2021-04-28</lastmod>
   </url>
   <url>
     <loc>https://www.gzhao01.top/GAMES101-lecture04/</loc>
@@ -51,10 +71,6 @@
   <url>
     <loc>https://www.gzhao01.top/GAMES101-lecture09/</loc>
     <lastmod>2021-03-19</lastmod>
-  </url>
-  <url>
-    <loc>https://www.gzhao01.top/GAMES101-lecture08/</loc>
-    <lastmod>2021-03-15</lastmod>
   </url>
   <url>
     <loc>https://www.gzhao01.top/GAMES101-lecture07/</loc>
